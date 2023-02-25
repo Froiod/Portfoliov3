@@ -39,17 +39,22 @@ const Navbar = () => {
         <div className="md:hidden w-full bg-gray-200 rounded-b-3xl" id="menu">
           <ul className="flex items-center justify-center w-full py-8 space-x-6 font-bold  text-black">         
             <li className="nav-item">
-              <a href="#about" className="nav-link">
+              <a href="#About" className="nav-link">
                 <i className="uil uil-user">About</i>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#works" className="nav-link">
+              <a href="#Skills" className="nav-link">
+              <i class="uil uil-edit">Skills</i>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#Works" className="nav-link">
                 <i className="uil uil-briefcase-alt">Works</i>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#contact" className="nav-link">
+              <a href="#Contact" className="nav-link">
                 <i className="uil uil-message">Contact Me</i>
               </a>
             </li>

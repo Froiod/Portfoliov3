@@ -21,7 +21,7 @@ const Navbar = () => {
 
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {['About','Skills', 'Works', 'Contact'].map((item) => (
-            <li key={`link-${item}`} className='hover:text-gray-700 hover:translate-y-0.5 hover:transition-all'>
+            <li key={`link-${item}`} className='hover:text-gray-900 hover:translate-y-0.5 hover:transition-all'>
               <a href={`#${item}`} className=''>{item}</a>
             </li>
           ))}
@@ -37,7 +37,7 @@ const Navbar = () => {
       </nav>
       {toggle && (
         <div className="md:hidden w-full bg-gray-200 rounded-b-3xl" id="menu">
-          <ul className="flex items-center justify-center w-full py-8 space-x-6 font-bold  text-black">         
+          <ul className="flex items-center justify-center w-full py-8 space-x-6 font-bold  text-gray-900">         
             <li className="nav-item">
               <a href="#About" className="nav-link">
                 <i className="uil uil-user">About</i>

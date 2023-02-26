@@ -1,4 +1,4 @@
-import frame from '../assets/Frame.png'
+import frame from '../assets/ImgFrame.png'
 import profile from '../assets/Profile.jpg'
 
 const About = () => {

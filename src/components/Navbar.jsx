@@ -18,7 +18,6 @@ const Navbar = () => {
     <header className="w-full fixed z-40 top-0 left-0 " id="header">
       <nav className="h-12 flex justify-between items-center bg-gray-100 px-6">
         <a href="#" className="">Paolo</a>
-
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {['About','Skills', 'Works', 'Contact'].map((item) => (
             <li key={`link-${item}`} className='hover:text-gray-900 hover:translate-y-0.5 hover:transition-all'>
@@ -45,7 +44,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <a href="#Skills" className="nav-link">
-              <i class="uil uil-edit">Skills</i>
+              <i className="uil uil-edit">Skills</i>
               </a>
             </li>
             <li className="nav-item">

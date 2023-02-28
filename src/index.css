@@ -20,6 +20,7 @@
 .hamburger-top, 
 .hamburger-middle, 
 .hamburger-bottom {
+  @apply bg-gray-900;
   position: absolute;
   width: 24px;
   height: 2px;
@@ -27,7 +28,6 @@
   left: 0;
   transform: rotate(0);
   transition: all 0.5s;
-  background: black;
 }
 
 .hamburger-middle {

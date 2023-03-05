@@ -16,8 +16,8 @@ const Navbar = () => {
 
   return (
     <header className="w-full fixed z-40 top-0 left-0 " id="header">
-      <nav className="h-12 flex justify-between items-center bg-gray-100 px-6">
-        <a href="#" className="">Paolo</a>
+      <nav className="h-12 flex justify-between items-center bg-blue-300 px-6 shadow-lg">
+        <a href="#" className="font-yeseva text-2xl">Paolo Guray</a>
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {['About','Skills', 'Works', 'Contact'].map((item) => (
             <li key={`link-${item}`} className='hover:text-gray-900 hover:translate-y-0.5 hover:transition-all'>

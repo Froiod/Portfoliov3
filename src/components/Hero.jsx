@@ -20,7 +20,7 @@ const Hero = () => {
       <div className='absolute flex justify-end md:hidden top-12 right-12'>
         <img src={Wave} alt="" className='w-1/2'/>
       </div>
-      <div className='absolute hidden md:right-12  md:flex lg:w-1/2 items-center justify-end'>
+      <div className='absolute hidden md:right-12 md:flex lg:w-1/2 items-center justify-end'>
         <img src={hero} alt="" className=''/>
       </div>
       <div className='absolute hidden sm:flex bottom-4 right-12 md:hidden lg:w-1/2 items-center justify-end'>

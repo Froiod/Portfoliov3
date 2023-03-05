@@ -21,7 +21,7 @@ const Works = () => {
   return (
     <section className='px-12 py-16 text-center'>
       <h2 className="text-2xl md:text-3xl text-center my-6 font-black text-gray-900 ">My Projects</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 text-2xl text-gray-900 uppercase gap-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 text-2xl text-gray-900 uppercase gap-12 lg:gap-8">
         {images.map((item) => (
           <div className="group relative overflow-hidden" key={item.title}>
             <a href="">

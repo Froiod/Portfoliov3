@@ -55,6 +55,10 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateX(-6px) translateY(6px);
 }
+
+.active {
+  @apply font-bold text-[#ff4f32];
+}
 /*red: #ff4f32;
   yellow: #ffc930;
   blue:#61ccff

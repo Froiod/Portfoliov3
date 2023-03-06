@@ -5,6 +5,7 @@ import Wave from '../assets/Wave.png'
 const Hero = () => {
   return (
     <section className="h-[100vh] flex items-center justify-between px-12" id='Home'>
+
       <div className="pt-12 z-10">
         <div className="text-left space-y-6 ">
           <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-gray-900">
@@ -18,6 +19,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
+
       <div className='absolute flex justify-end md:hidden top-12 right-12'>
         <img src={Wave} alt="" className='w-56'/>
       </div>
@@ -30,6 +32,7 @@ const Hero = () => {
         <a href="https://github.com/settings/profile" target={'_blank'}><BsGithub/></a>
         <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>
       </div>
+      
     </section>
   )
 }

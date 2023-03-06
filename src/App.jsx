@@ -13,7 +13,6 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Skills />
       <Works />
       <Contact />
     </div>

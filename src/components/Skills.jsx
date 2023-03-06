@@ -9,7 +9,7 @@ import postgress from '../assets/postgresql.svg'
 
 const Skills = () => {
   return (
-    <section className='mx-12 mb-12 border-8 border-gray-900'>
+    <div className='mx-12 mb-12 border-8 border-gray-900'>
       <div className=''>
         <h2 className='text-2xl text-blue-100 font-semibold bg-gray-900 inline-block pb-1 pr-1 rounded-br-xl'>
           Languages:
@@ -56,7 +56,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

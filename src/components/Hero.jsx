@@ -3,7 +3,7 @@ import Wave from '../assets/Wave.png'
 
 const Hero = () => {
   return (
-    <section className="h-[100vh] flex items-center justify-between px-12">
+    <section className="h-[100vh] flex items-center justify-between px-12" id='Home'>
       <div className="pt-12 z-10">
         <div className="text-left space-y-6 ">
           <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-gray-900">

@@ -4,6 +4,10 @@ import { Link } from "react-scroll"
 
 const menuItems = [
   {
+    item: 'Home',
+    icon: 'uil uil-user'
+  },
+  {
     item: 'About',
     icon: 'uil uil-user'
   },
@@ -36,7 +40,7 @@ const Navbar = () => {
         <a href="#" className="font-yeseva text-2xl">Paolo Guray</a>
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {menuItems.map((menu) => (
-           <li key={`link-${menu.item}`} className='text-gray-700 hover:translate-y-0.5 hover:transition-all'>
+           <li key={`link-${menu.item}`} className='text-gray-600 hover:translate-y-0.5 hover:transition-all cursor-pointer'>
             <Link activeClass="active" smooth spy to={menu.item}>{menu.item}</Link>
            </li> 
           ))}

@@ -1,23 +1,24 @@
-
+import { AiOutlineHome, AiOutlineUser, AiOutlineSend } from 'react-icons/ai'
+import { BsBriefcase } from 'react-icons/bs'
 import {useState} from 'react'
 import { Link } from "react-scroll"
 
 const menuItems = [
   {
     item: 'Home',
-    icon: 'uil uil-user'
+    icon: <AiOutlineHome/>
   },
   {
     item: 'About',
-    icon: 'uil uil-user'
+    icon: <AiOutlineUser/>
   },
   {
     item: 'Works',
-    icon: 'uil uil-briefcase-alt'
+    icon: <BsBriefcase/>
   },
   {
     item: 'Contact',
-    icon: 'uil uil-message'
+    icon: <AiOutlineSend/>
   },
 ]
 
@@ -57,12 +58,13 @@ const Navbar = () => {
 
       {toggle && (
         <div className="md:hidden w-full bg-blue-200 rounded-b-3xl shadow-lg" id="menu">
-          <ul className="flex items-center justify-center w-full py-8 space-x-8 font-bold  text-gray-900">
+          <ul className="flex items-center justify-center w-full py-8 space-x-8 font-bold  text-gray-600">
             {menuItems.map((menu) => (
-              <li key={`link-${menu.item}`}>
-                <a href={`#${menu.item}`} className=''>
-                  <i className={`${menu.icon}`}> {menu.item} </i>
-                </a>
+              <li key={`link-${menu.item}`} className='flex justify-center items-center space-x-1 text-lg cursor-pointer'>
+                {menu.icon}
+                <Link activeClass="active" smooth spy to={menu.item}>
+                  {menu.item}
+                </Link>
               </li>
             ))}         
           </ul>

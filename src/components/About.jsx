@@ -3,7 +3,7 @@ import profile from '../assets/Profile.jpg'
 
 const About = () => {
   return (
-    <section className="flex flex-col lg:h-[100vh] lg:flex-row px-12 text-gray-900">
+    <section className="flex flex-col lg:h-[100vh] lg:flex-row px-12 text-gray-900" id='About'>
       <div className="flex flex-col justify-center relative lg:w-1/2 lg:items-center">
         <div className='relative flex items-center justify-center mt-6'>
           <img src={frame} alt="" className='absolute' />

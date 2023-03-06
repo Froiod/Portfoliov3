@@ -1,5 +1,6 @@
 
 import {useState} from 'react'
+import { Link } from "react-scroll"
 
 const menuItems = [
   {
@@ -36,7 +37,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {menuItems.map((menu) => (
            <li key={`link-${menu.item}`} className='text-gray-700 hover:translate-y-0.5 hover:transition-all'>
-            <a href={`#${menu.item}`}>{menu.item}</a>
+            <Link activeClass="active" smooth spy to={menu.item}>{menu.item}</Link>
            </li> 
           ))}
         </ul>

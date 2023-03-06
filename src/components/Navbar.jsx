@@ -41,7 +41,7 @@ const Navbar = () => {
         <a href="#" className="font-yeseva text-2xl">Paolo Guray</a>
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {menuItems.map((menu) => (
-           <li key={`link-${menu.item}`} className='text-gray-600 hover:translate-y-0.5 hover:transition-all cursor-pointer'>
+           <li key={`link-${menu.item}`} className='text-gray-600 hover:text-gray-800 hover:transition-all cursor-pointer'>
             <Link activeClass="active" smooth spy to={menu.item}>{menu.item}</Link>
            </li> 
           ))}
@@ -57,12 +57,12 @@ const Navbar = () => {
       </nav>
 
       {toggle && (
-        <div className="md:hidden w-full bg-blue-200 rounded-b-3xl shadow-lg" id="menu">
+        <div className="md:hidden w-full bg-blue-300 rounded-b-3xl shadow-lg" id="menu">
           <ul className="flex items-center justify-center w-full py-8 space-x-8 font-bold  text-gray-600">
             {menuItems.map((menu) => (
-              <li key={`link-${menu.item}`} className='flex justify-center items-center space-x-1 text-lg cursor-pointer'>
-                {menu.icon}
-                <Link activeClass="active" smooth spy to={menu.item}>
+              <li key={`link-${menu.item}`} className='text-lg cursor-pointer hover:text-gray-800 hover:transition-all'>
+                <Link activeClass="active" smooth spy to={menu.item} className='flex justify-center items-center gap-1'>
+                  {menu.icon}
                   {menu.item}
                 </Link>
               </li>

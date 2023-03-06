@@ -29,9 +29,9 @@ const Hero = () => {
       </div>
 
       <div className='absolute left-12 bottom-12 flex space-x-6 text-2xl'>
-        <a href=""><BsFacebook/></a>
-        <a href=""><BsGithub/></a>
-        <a href=""><BsLinkedin/></a>
+        <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
+        <a href="https://github.com/settings/profile" target={'_blank'}><BsGithub/></a>
+        <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>
       </div>
     </section>
   )

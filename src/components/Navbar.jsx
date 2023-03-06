@@ -1,8 +1,23 @@
 
 import {useState} from 'react'
 
-const Navbar = () => {
+const menuItems = [
+  {
+    item: 'About',
+    icon: 'uil uil-user'
+  },
+  {
+    item: 'Works',
+    icon: 'uil uil-briefcase-alt'
+  },
+  {
+    item: 'Contact',
+    icon: 'uil uil-message'
+  },
+]
 
+const Navbar = () => {
+  
   const [toggle, setToggle] = useState(false)
 
   const openMenu = (e) => {
@@ -19,10 +34,10 @@ const Navbar = () => {
       <nav className="h-12 flex justify-between items-center bg-blue-300 px-6 shadow-lg">
         <a href="#" className="font-yeseva text-2xl">Paolo Guray</a>
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
-          {['About','Skills', 'Works', 'Contact'].map((item) => (
-            <li key={`link-${item}`} className='hover:text-gray-900 hover:translate-y-0.5 hover:transition-all'>
-              <a href={`#${item}`} className=''>{item}</a>
-            </li>
+          {menuItems.map((menu) => (
+           <li key={`link-${menu.item}`} className='text-gray-700 hover:translate-y-0.5 hover:transition-all'>
+            <a href={`#${menu.item}`}>{menu.item}</a>
+           </li> 
           ))}
         </ul>
 
@@ -34,32 +49,21 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+
       {toggle && (
-        <div className="md:hidden w-full bg-gray-200 rounded-b-3xl" id="menu">
-          <ul className="flex items-center justify-center w-full py-8 space-x-6 font-bold  text-gray-900">         
-            <li className="nav-item">
-              <a href="#About" className="nav-link">
-                <i className="uil uil-user">About</i>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#Skills" className="nav-link">
-              <i className="uil uil-edit">Skills</i>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#Works" className="nav-link">
-                <i className="uil uil-briefcase-alt">Works</i>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#Contact" className="nav-link">
-                <i className="uil uil-message">Contact Me</i>
-              </a>
-            </li>
+        <div className="md:hidden w-full bg-blue-200 rounded-b-3xl shadow-lg" id="menu">
+          <ul className="flex items-center justify-center w-full py-8 space-x-8 font-bold  text-gray-900">
+            {menuItems.map((menu) => (
+              <li key={`link-${menu.item}`}>
+                <a href={`#${menu.item}`} className=''>
+                  <i className={`${menu.icon}`}> {menu.item} </i>
+                </a>
+              </li>
+            ))}         
           </ul>
         </div>
       )}
+
     </header>
   )
 }

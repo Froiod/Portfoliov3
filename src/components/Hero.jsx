@@ -1,3 +1,4 @@
+import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import hero from '../assets/hero.png'
 import Wave from '../assets/Wave.png'
 
@@ -25,6 +26,12 @@ const Hero = () => {
       </div>
       <div className='absolute hidden sm:flex bottom-4 right-12 md:hidden lg:w-1/2 items-center justify-end'>
         <img src={hero} alt="" className='w-1/2'/>
+      </div>
+
+      <div className='absolute left-12 bottom-12 flex space-x-6 text-2xl'>
+        <a href=""><BsFacebook/></a>
+        <a href=""><BsGithub/></a>
+        <a href=""><BsLinkedin/></a>
       </div>
     </section>
   )

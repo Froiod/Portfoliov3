@@ -2,7 +2,6 @@ import React, { useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/Ai'
-require('dotenv').config()
 
 const Contact = () => {
 

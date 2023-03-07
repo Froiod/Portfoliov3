@@ -1,34 +1,24 @@
 import React from 'react'
+import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
+import { AiOutlineMail } from 'react-icons/Ai'
 
 const Contact = () => {
   return (
-    <section className='px-12 py-12' id='Contact'>
+    <section className='relative px-12 py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12' id='Contact'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8'>
         {/* leftside */}
         <div className='p-6 bg-gray-100 dark:bg-gray-800 sm:rounded-lg'>
           <h1 className="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
             Get in touch
           </h1>
-          <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
-            Fill in the form to start a conversation
+          <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-8">
+            Fill in your info in the form below and I look forward to hearing from you!
           </p>
-          <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
-            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" className="w-8 h-8 text-gray-500">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-            <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                Acme Inc, Street, State,
-                Postal Code
-            </div>
-          </div>
-          <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" className="w-8 h-8 text-gray-500">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                info@acme.org
-            </div>
+          <div className='mt-16'>
+            <a href="" className='flex items-center space-x-2 text-xl italic'>
+              <AiOutlineMail />
+              <h3>paologuray1@gmail.com</h3>
+            </a>
           </div>
         </div>
 
@@ -49,11 +39,18 @@ const Contact = () => {
               <textarea type="textbox" name="message" id="message" placeholder="Message" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"/>
           </div>
 
-          <button type="submit" className="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
+          <button type="submit" className="md:w-32 bg-[#ff4f32] hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
               Submit
           </button>
         </form>
       </div>
+
+      <div className='flex space-x-6 text-2xl md:absolute left-12 bottom-12'>
+        <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
+        <a href="https://github.com/settings/profile" target={'_blank'}><BsGithub/></a>
+        <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>
+      </div>
+
     </section>
   )
 }

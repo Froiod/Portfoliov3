@@ -57,8 +57,12 @@
 }
 
 .active {
-  @apply font-bold text-[#ff4f32];
+  @apply border-b-[3px] border-[#ff4f32] text-gray-900;
 }
+
+
+
+
 /*red: #ff4f32;
   yellow: #ffc930;
   blue:#61ccff

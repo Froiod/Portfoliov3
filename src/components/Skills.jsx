@@ -6,10 +6,11 @@ import react from '../assets/react.svg'
 import bootstrap from '../assets/bootstrap.svg'
 import tailwind from '../assets/tailwindcss.svg'
 import postgress from '../assets/postgresql.svg'
+import sql from '../assets/sql.png'
 
 const Skills = () => {
   return (
-    <div className='mx-12 mb-12 border-8 border-gray-900'>
+    <div className='mx-12 pb-12 border-8 border-gray-900'>
       <div className=''>
         <h2 className='text-2xl text-blue-100 font-semibold bg-gray-900 inline-block pb-1 pr-1 rounded-br-xl'>
           Languages:
@@ -28,7 +29,7 @@ const Skills = () => {
             <h3 className='text-xl text-center font-semibold'>JavaScript</h3>
           </div>
           <div className='flex flex-col items-center justify-center'>
-            <img src={react} alt="" className='w-[40%]'/>
+            <img src={sql} alt="" className='w-[40%]'/>
             <h3 className='text-xl text-center font-semibold'>SQL</h3>
           </div>
         </div>

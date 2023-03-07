@@ -4,7 +4,7 @@ import Skills from './Skills'
 
 const About = () => {
   return (
-    <section id='About' className='bg-gradient-to-br from-blue-200 to-blue-100'>
+    <section id='About' className='bg-gradient-to-br from-blue-200 to-blue-100 pb-16'>
       <div className="flex flex-col lg:h-[100vh] lg:flex-row px-12 text-gray-900">
         <div className="flex flex-col justify-center relative lg:w-1/2 lg:items-center">
           <div className='relative flex items-center justify-center mt-6'>

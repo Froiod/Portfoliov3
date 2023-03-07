@@ -2,27 +2,42 @@
 
 const images = [
   {
-    src: './projects/Shortly.png',
-    title: 'Picasso Painting'
+    src: './projects/magic.png',
+    title: 'Memory Game'
   },
   {
-    src: './projects/Expanding.png',
-    title: 'Expanding Card'
+    src: './projects/digiCommerce.png',
+    title: 'Digi-Commerce'
   },
   {
     src: './projects/Quote Generator.png',
     title: 'Quote Generator'
   },
   {
-    src: './projects/Shortly.png',
-    title: 'Shortly'
+    src: './projects/recipeDirectory.png',
+    title: 'Recipe Directory'
+  },
+  {
+    src: './projects/feedback.png',
+    title: 'Feedback App'
+  },
+  {
+    src: './projects/weatherApp.png',
+    title: 'Weather App'
   },
 ]
 
 const Works = () => {
   return (
-    <section className='px-12 py-16 text-center' id="Works">
-      <h2 className="text-2xl md:text-3xl text-center my-6 font-black text-gray-900 ">My Projects</h2>
+    <section className='px-12 py-16 text-center bg-gradient-to-br from-emerald-200 to-real-300' id="Works">
+      <div className="md:flex justify-between items-center md:mb-6">
+        <h2 className="text-2xl md:text-3xl text-center my-12 font-black text-gray-900 md:text-left">MY PROJECTS</h2>
+        <a href="">
+          <div className="hidden md:inline-block my-12 text-xl p-1 text-gray-900 font-semibold border-gray-900 border-2 hover:bg-[#ff4f32] hover:border-[#ff4f32] hover:text-blue-100 px-4">
+            SEE ALL
+          </div>
+        </a>
+      </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 text-2xl text-gray-900 uppercase gap-12 lg:gap-8">
         {images.map((item) => (
           <div className="group relative overflow-hidden" key={item.title}>
@@ -37,6 +52,11 @@ const Works = () => {
           </div>
         ))}
       </div>
+      <a href="">
+        <div className="md:hidden my-12 text-xl p-1 text-gray-900 font-semibold border-gray-900 border-2 hover:bg-[#ff4f32] hover:border-[#ff4f32] hover:text-blue-100">
+          SEE ALL
+        </div>
+      </a>
     </section>
   )
 }

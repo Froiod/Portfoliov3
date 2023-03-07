@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useRef} from 'react';
+import emailjs from '@emailjs/browser';
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/Ai'
+require('dotenv').config()
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    form.current.reset()
+
+    emailjs
+      .sendForm(
+        'service_cjlkvq8', 
+        'template_44nqsom', 
+        form.current, 
+        '49Fw3ttzpwsgDI_QQ'
+      )
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <section className='relative px-12 py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12' id='Contact'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8'>
@@ -23,7 +46,7 @@ const Contact = () => {
         </div>
 
         {/* form */}
-        <form className="flex flex-col justify-center">
+        <form className="flex flex-col justify-center" ref={form} onSubmit={sendEmail}>
           <div className="flex flex-col">
               <label htmlFor="name" className="hidden">Full Name</label>
               <input type="name" name="name" id="name" placeholder="Full Name" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"/>
@@ -36,10 +59,10 @@ const Contact = () => {
 
           <div className="flex flex-col mt-2">
               <label htmlFor="message" className="hidden">Number</label>
-              <textarea type="textbox" name="message" id="message" placeholder="Message" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"/>
+              <textarea type="textbox" name="message" id="message" placeholder="Message" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" required/>
           </div>
 
-          <button type="submit" className="md:w-32 bg-[#ff4f32] hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
+          <button type="submit" value="Send" className="md:w-32 bg-[#ff4f32] hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-[#f7543a] transition ease-in-out duration-300">
               Submit
           </button>
         </form>

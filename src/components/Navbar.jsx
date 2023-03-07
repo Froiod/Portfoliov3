@@ -23,16 +23,22 @@ const menuItems = [
 ]
 
 const Navbar = () => {
-  
+  const [isOpen, setOpen] = useState(false)
   const [toggle, setToggle] = useState(false)
 
   const openMenu = (e) => {
-    e.currentTarget.classList.toggle('open')
     if (toggle == false) {
       setToggle(true)
+      setOpen(true)
     } else {
       setToggle(false)
+      setOpen(false)
     }
+  }
+
+  const closeMenu = () => {
+    setToggle(false)
+    setOpen(false) 
   }
 
   return (
@@ -48,7 +54,7 @@ const Navbar = () => {
         </ul>
 
         <div className="md:hidden">
-          <button type="button" id="menu-btn" className=" close hamburger z-40 md:hidden focus:outline-none block" onClick={openMenu}>
+          <button type="button" id="menu-btn" className={`${isOpen ? "open" : ""} hamburger z-40 md:hidden focus:outline-none block'`} onClick={openMenu}>
             <span className="hamburger-top"></span>
             <span className="hamburger-middle"></span>
             <span className="hamburger-bottom"></span>
@@ -61,7 +67,7 @@ const Navbar = () => {
           <ul className="flex items-center justify-center w-full py-8 space-x-8 font-bold  text-gray-600">
             {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className='text-lg cursor-pointer hover:text-gray-800 hover:transition-all'>
-                <Link activeClass="active" smooth spy to={menu.item} className='flex justify-center items-center gap-1'>
+                <Link activeClass="active" smooth spy to={menu.item} onClick={closeMenu} className='flex justify-center items-center gap-1'>
                   {menu.icon}
                   {menu.item}
                 </Link>

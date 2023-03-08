@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <header className="w-full fixed z-40 top-0 left-0 " id="header">
       <nav className="h-12 flex justify-between items-center bg-blue-300 px-6 shadow-lg">
-        <a href="#" className="font-yeseva text-2xl">Paolo Guray</a>
+        <a href="#" className="font-yeseva text-xl md:text-2xl">Paolo Guray</a>
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {menuItems.map((menu) => (
            <li key={`link-${menu.item}`} className='text-gray-600 hover:text-gray-800 hover:transition-all cursor-pointer'>

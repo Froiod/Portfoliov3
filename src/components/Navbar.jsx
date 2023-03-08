@@ -63,8 +63,8 @@ const Navbar = () => {
       </nav>
 
       {toggle && (
-        <div className="md:hidden w-full bg-blue-300 rounded-b-3xl shadow-lg" id="menu">
-          <ul className="flex items-center justify-center w-full py-8 space-x-8 font-bold  text-gray-600">
+        <div className="md:hidden w-full bg-blue-300 rounded-b-3xl shadow-lg p-6" id="menu">
+          <ul className="flex items-center justify-between w-full py-8 font-bold  text-gray-600">
             {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className='text-lg cursor-pointer hover:text-gray-800 hover:transition-all'>
                 <Link activeClass="active" smooth spy to={menu.item} onClick={closeMenu} className='flex justify-center items-center gap-1'>

@@ -2,6 +2,7 @@ import { AiOutlineHome, AiOutlineUser, AiOutlineSend } from 'react-icons/ai'
 import { BsBriefcase } from 'react-icons/bs'
 import {useState} from 'react'
 import { Link } from "react-scroll"
+import {motion} from 'framer-motion'
 
 const menuItems = [
   {
@@ -40,10 +41,27 @@ const Navbar = () => {
     setToggle(false)
     setOpen(false) 
   }
+  // animation
+  const navMenu = {
+    opened: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+      },
+    },
+    closed: {
+      y: -200,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+      },
+    }
+  }
 
   return (
-    <header className="w-full fixed z-40 top-0 left-0 " id="header">
-      <nav className="h-12 flex justify-between items-center bg-blue-300 px-6 shadow-lg">
+    <header className="w-full fixed top-0 left-0 z-40" id="header">
+      <nav className="h-12 flex justify-between items-center bg-gradient-to-b from-blue-300 to-blue-400 px-6 shadow-lg z-50">
         <a href="#" className="font-yeseva text-xl md:text-2xl">Paolo Guray</a>
         <ul className="hidden md:flex space-x-8 font-semibold text-xl">
           {menuItems.map((menu) => (
@@ -62,8 +80,11 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {toggle && (
-        <div className="md:hidden w-full bg-blue-300 rounded-b-3xl shadow-lg p-6" id="menu">
+        <motion.div className="absolute md:hidden w-full bg-blue-300 rounded-b-3xl shadow-xl p-6 -z-10" id="menu"
+          variants={navMenu}
+          initial={{opacity: 0, y: -24,}}
+          animate={isOpen ? "opened" : "closed"}
+        >
           <ul className="flex items-center justify-between w-full py-8 font-bold  text-gray-600">
             {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className='text-base sm:text-lg cursor-pointer hover:text-gray-800 hover:transition-all'>
@@ -74,9 +95,7 @@ const Navbar = () => {
               </li>
             ))}         
           </ul>
-        </div>
-      )}
-
+        </motion.div>
     </header>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
-import { AiOutlineMail } from 'react-icons/ai'
+import { GrMailOption } from 'react-icons/gr'
 
 const Contact = () => {
 
@@ -39,7 +39,7 @@ const Contact = () => {
           </p>
           <div className='mt-16'>
             <a href="" className='flex items-center space-x-2 text-xl italic'>
-              <AiOutlineMail />
+              <GrMailOption />
               <h3>paologuray1@gmail.com</h3>
             </a>
           </div>

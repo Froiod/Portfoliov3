@@ -11,7 +11,7 @@ const About = () => {
             <img src={frame} alt="" className='absolute' />
             <img src={profile} alt="" className='scale-50 z-10 shadow-xl shadow-black'/>
           </div>
-          <h1 className='text-blue-100 bg-gray-900 text-3xl font-bold absolute bottom-12 w-full text-center pb-1'>About Me</h1>
+          <h1 className='text-blue-100 bg-gray-900 text-3xl font-bold absolute bottom-6 md:bottom-12 w-full text-center pb-1'>About Me</h1>
         </div>
         <div className="flex items-center justify-center pb-12 lg:w-1/2 lg:items-center lg:ml-12">
           <div className='flex flex-col space-y-4 justify-center items-center text-base sm:text-lg md:text-xl lg:items-center bg-blue-50 py-6 px-4 shadow-2xl rounded-lg'>

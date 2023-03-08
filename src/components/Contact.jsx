@@ -38,7 +38,7 @@ const Contact = () => {
             Fill in your info in the form below and I look forward to hearing from you!
           </p>
           <div className='mt-16'>
-            <a href="" className='flex items-center space-x-2 text-xl italic'>
+            <a href="mailto:paologuray1@gmail.com" target={'_blank'} className='flex items-center space-x-2 text-xl italic'>
               <GrMailOption />
               <h3>paologuray1@gmail.com</h3>
             </a>

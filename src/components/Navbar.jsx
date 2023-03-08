@@ -1,4 +1,4 @@
-import { AiOutlineHome, AiOutlineUser, AiOutlineSend } from 'react-icons/Ai'
+import { AiOutlineHome, AiOutlineUser, AiOutlineSend } from 'react-icons/ai'
 import { BsBriefcase } from 'react-icons/bs'
 import {useState} from 'react'
 import { Link } from "react-scroll"

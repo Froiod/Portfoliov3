@@ -4,7 +4,7 @@ import Wave from '../assets/Wave.png'
 
 const Hero = () => {
   return (
-    <section className="h-[100vh] flex items-center justify-between px-12" id='Home'>
+    <section className="h-[100vh] flex items-center justify-between px-6 sm:px-12" id='Home'>
 
       <div className="pt-12 z-10">
         <div className="text-left space-y-6 ">
@@ -27,7 +27,7 @@ const Hero = () => {
         <img src={hero} alt="" className=''/>
       </div>
 
-      <div className='absolute left-12 bottom-12 flex space-x-6 text-2xl'>
+      <div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl'>
         <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
         <a href="https://github.com/Froiod" target={'_blank'}><BsGithub/></a>
         <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>

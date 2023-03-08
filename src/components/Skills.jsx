@@ -10,7 +10,7 @@ import sql from '../assets/sql.png'
 
 const Skills = () => {
   return (
-    <div className='mx-12 pb-12 border-8 border-gray-900'>
+    <div className='mx-6 sm:mx-12 pb-12 border-8 border-gray-900'>
       <div className=''>
         <h2 className='text-2xl text-blue-100 font-semibold bg-gray-900 inline-block pb-1 pr-1 rounded-br-xl'>
           Languages:

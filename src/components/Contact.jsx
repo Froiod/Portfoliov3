@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   return (
-    <section className='relative px-12 py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12' id='Contact'>
+    <section className='relative px-6 sm:px-12 py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12' id='Contact'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8'>
         {/* leftside */}
         <div className='p-6 bg-gray-100 dark:bg-gray-800 sm:rounded-lg'>

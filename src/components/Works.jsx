@@ -35,7 +35,7 @@ const images = [
 
 const Works = () => {
   return (
-    <section className='px-12 py-16 text-center bg-gradient-to-br from-emerald-200 to-real-300' id="Works">
+    <section className='px-6 sm:px-12 py-16 text-center bg-gradient-to-br from-emerald-200 to-real-300' id="Works">
       <div className="md:flex justify-between items-center md:mb-6">
         <h2 className="text-2xl md:text-3xl text-center my-12 font-black text-gray-900 md:text-left">MY PROJECTS</h2>
         <a href="https://github.com/Froiod" target={'_blank'}>

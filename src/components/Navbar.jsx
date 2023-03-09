@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import {motion} from 'framer-motion';
 import { AiOutlineHome, AiOutlineUser, AiOutlineSend } from 'react-icons/ai';
 import { BsBriefcase } from 'react-icons/bs'
+import logo from '../assets/logo.png'
 
 const menuItems = [
   {
@@ -82,11 +83,11 @@ function Navbar() {
         isSticky ? 'fixed top-0 w-full bg-white shadow-md z-50' : 'fixed top-0 w-full z-50'
       }`}
     >
-      <nav className="px-6">
-        <div className="flex w-full justify-between items-center py-4">
-          <a href="#" className="font-bold text-gray-700 -z-10">
-            Paolo Guray
-          </a>
+      <nav className="px-6 md:px-12">
+        <div className="flex w-full justify-between items-center py-4 md:py-[13.5px]">
+          <div className=''>
+            <img src={logo} alt="" className='w-24 md:w-32'/>
+          </div>
           <div className="flex md:hidden">
             <button type="button" id="menu-btn" className={`${isOpen ? "open hamburger md:hidden focus:outline-none block" : "hamburger md:hidden focus:outline-none block"}`} onClick={openMenu}>
               <span className="hamburger-top"></span>
@@ -94,12 +95,12 @@ function Navbar() {
               <span className="hamburger-bottom"></span>
             </button>
           </div>
-          <ul className='hidden md:flex md:items-center md:w-auto'>
+          <ul className='hidden md:flex md:items-center md:w-auto space-x-8'>
               {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className=''>
-              <Link activeClass="active" smooth spy to={menu.item} className="block mx-4 mt-2 md:mt-0 text-xl text-gray-400 font-semibold hover:text-gray-900 cursor-pointer">
+                <Link activeClass="active" smooth spy to={menu.item} className="block mt-2 md:mt-0 text-xl text-gray-400 font-semibold hover:text-gray-900 cursor-pointer">
                 {menu.item}
-              </Link>
+                </Link>
               </li> 
             ))}
           </ul>

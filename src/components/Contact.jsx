@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   return (
-    <section className='relative px-6 sm:px-12 py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12' id='Contact'>
+    <section className='relative px-6 sm:px-12 py-16 md:py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12' id='Contact'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8'>
         {/* leftside */}
         <div className='p-6 bg-gray-100 dark:bg-gray-800 sm:rounded-lg'>
@@ -37,7 +37,7 @@ const Contact = () => {
           <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-8">
             Fill in your info in the form below and I look forward to hearing from you!
           </p>
-          <div className='mt-16'>
+          <div className='mt-8 md:mt-16'>
             <a href="mailto:paologuray1@gmail.com" target={'_blank'} className='flex items-center space-x-2 text-xl italic'>
               <GrMailOption />
               <h3>paologuray1@gmail.com</h3>

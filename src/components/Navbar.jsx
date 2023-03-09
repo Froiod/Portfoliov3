@@ -108,20 +108,20 @@ function Navbar() {
 
       <motion.div className="absolute top-0 md:hidden w-full bg-white rounded-b-3xl shadow-xl p-6 -z-10" id="menu"
           variants={navMenu}
-          initial={{opacity: 0, y: -24,}}
+          initial={false}
           animate={isOpen ? "opened" : "closed"}
-        >
-          <ul className="flex items-center justify-between w-full py-8 font-semibold  text-gray-400">
-            {menuItems.map((menu) => (
-              <li key={`link-${menu.item}`} className='text-base sm:text-lg cursor-pointer hover:text-gray-800 hover:transition-all'>
-                <Link activeClass="active" smooth spy to={menu.item} onClick={closeMenu} className='flex flex-col justify-center items-center gap-1'>
-                  {menu.icon}
-                  {menu.item}
-                </Link>
-              </li>
-            ))}         
-          </ul>
-        </motion.div>
+      >
+        <ul className="flex items-center justify-between w-full py-8 font-semibold  text-gray-400">
+          {menuItems.map((menu) => (
+            <li key={`link-${menu.item}`} className='text-base sm:text-lg cursor-pointer hover:text-gray-800 hover:transition-all'>
+              <Link activeClass="active" smooth spy to={menu.item} onClick={closeMenu} className='flex flex-col justify-center items-center gap-1'>
+                {menu.icon}
+                {menu.item}
+              </Link>
+            </li>
+          ))}         
+        </ul>
+      </motion.div>
     </header>
   );
 }

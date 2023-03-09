@@ -1,16 +1,69 @@
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import hero from '../assets/hero.png'
 import Wave from '../assets/Wave.png'
+import {motion} from 'framer-motion'
 
 const Hero = () => {
+
+  //Animation 
+  const intro = `Hello! I'am Paolo`
+  const introSplit = Array.from(intro)
+
+  const container = {
+    hidden: {opacity: 0},
+    
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.08, delayChildren: 0.4 * i },
+    }),
+  }
+
+  const child = {
+    visible: {
+      opacity:1,
+      x: 0,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 20,
+      y: 20,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    }
+  }
+
   return (
     <section className="h-[100vh] flex items-center justify-between px-6 sm:px-12" id='Home'>
 
       <div className="pt-12 z-10">
         <div className="text-left space-y-6 ">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-gray-900">
+          <motion.div 
+            className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-gray-900"
+            variants={container} initial="hidden" animate="visible"
+          >
+            {introSplit.map((letter, index) => (
+              <motion.span
+                variants={child}
+                key={index}
+                className='hover:text-[#ff4f32] hover:translate-y-0.5 hover:transition-all cursor-pointer'
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </motion.div>
+
+          {/* <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-gray-900">
             Hello! I'am <span className="italic">Paolo</span>
-          </h1>
+          </h1> */}
           <p className="text-3xl md:text-5xl  xl:text-6xl text-blue-100 bg-[#ff4f32] inline-block px-6 pt-2 pb-4 font-bold">
             a<span className="font-600 italic font-bold"> Web Developer</span>
           </p>

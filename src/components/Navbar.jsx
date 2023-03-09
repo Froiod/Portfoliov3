@@ -85,7 +85,7 @@ function Navbar() {
     >
       <nav className="px-6 md:px-12">
         <div className="flex w-full justify-between items-center py-4 md:py-[13.5px]">
-          <div className=''>
+          <div className='-z-10'>
             <img src={logo} alt="" className='w-24 md:w-32'/>
           </div>
           <div className="flex md:hidden">

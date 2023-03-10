@@ -26,7 +26,6 @@ const menuItems = [
 
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setOpen] = useState(false)
   const [toggle, setToggle] = useState(false)
 
@@ -84,7 +83,9 @@ function Navbar() {
       }`}
     >
       <nav className="px-6 md:px-12">
+
         <div className="flex w-full justify-between items-center py-4 md:py-[13.5px]">
+          
           <div className='-z-10'>
             <img src={logo} alt="" className='w-24 md:w-32'/>
           </div>
@@ -95,6 +96,7 @@ function Navbar() {
               <span className="hamburger-bottom"></span>
             </button>
           </div>
+
           <ul className='hidden md:flex md:items-center md:w-auto space-x-8'>
               {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className=''>
@@ -104,7 +106,9 @@ function Navbar() {
               </li> 
             ))}
           </ul>
+
         </div>
+
       </nav>
 
       <motion.div className="absolute top-0 md:hidden w-full bg-white rounded-b-3xl shadow-xl p-6 -z-10" id="menu"
@@ -123,6 +127,7 @@ function Navbar() {
           ))}         
         </ul>
       </motion.div>
+
     </header>
   );
 }

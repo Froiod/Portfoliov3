@@ -82,10 +82,10 @@ function Navbar() {
         isSticky ? 'fixed top-0 w-full bg-white shadow-md z-50' : 'fixed top-0 w-full z-50'
       }`}
     >
-      <nav className="px-6 md:px-12">
+      <nav className="px-6 md:px-12 font-montserrat">
 
         <div className="flex w-full justify-between items-center py-4 md:py-[13.5px]">
-          
+
           <div className='-z-10'>
             <img src={logo} alt="" className='w-24 md:w-32'/>
           </div>
@@ -111,7 +111,7 @@ function Navbar() {
 
       </nav>
 
-      <motion.div className="absolute top-0 md:hidden w-full bg-white rounded-b-3xl shadow-xl p-6 -z-10" id="menu"
+      <motion.div className="absolute top-0 md:hidden w-full bg-white rounded-b-3xl font-montserrat shadow-xl p-6 -z-10" id="menu"
           variants={navMenu}
           initial={false}
           animate={isOpen ? "opened" : "closed"}

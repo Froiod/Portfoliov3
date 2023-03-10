@@ -7,7 +7,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'yeseva': ['Yeseva One', 'cursive']
+        'yeseva': ['Yeseva One', 'cursive'],
+        'montserrat': ['Montserrat', 'sansoserif'],
+        'lato': ['Lato', 'sans-serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
       }
     },
   },

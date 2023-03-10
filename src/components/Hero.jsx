@@ -6,7 +6,7 @@ import {motion} from 'framer-motion'
 const Hero = () => {
 
   //Animation 
-  const intro = `Hello! I'am Paolo`
+  const intro = `Hello! I'm Paolo`
   const introSplit = Array.from(intro)
 
   const container = {

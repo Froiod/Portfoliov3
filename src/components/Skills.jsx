@@ -51,7 +51,7 @@ const Skills = () => {
     <div className='mx-6 sm:mx-12 pb-12 border-[6px] border-gray-900 font-montserrat'>
   
       <div className=''>      
-        <h2 className='text-lg md:text-xl text-white font-medium bg-gray-900 inline-block py-2 px-2 rounded-br-xl'>
+        <h2 className='text-lg md:text-xl text-white font-medium bg-gray-900 inline-block py-2 px-2 rounded-br-xl ml-0'>
           Languages:
         </h2>      
         <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>
@@ -65,7 +65,7 @@ const Skills = () => {
       </div>
 
       <div className=''>      
-        <h2 className='text-lg md:text-xl text-white font-medium bg-gray-900 inline-block py-2 px-2 rounded-br-xl'>
+        <h2 className='text-lg md:text-xl text-white font-medium bg-gray-900 inline-block py-2 px-2 rounded-br-xl ml-0'>
           Techs:
         </h2>      
         <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>

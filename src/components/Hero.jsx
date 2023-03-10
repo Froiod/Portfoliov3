@@ -75,15 +75,11 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* <div className='absolute hidden md:right-12 md:flex lg:w-1/2 items-center justify-end'>
-          <img src={hero} alt="" className=''/>
-        </div> */}
-      
       <div className='absolute flex justify-end md:hidden top-4 right-12'>
         <img src={Wave} alt="" className='w-56'/>
       </div>
 
-      <div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl'>
+      <div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl z-10'>
         <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
         <a href="https://github.com/Froiod" target={'_blank'}><BsGithub/></a>
         <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>

@@ -4,11 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* colors */
-.accent {
-  color: #ff4f32;
-}
-
 /* Navigation */
 
 .hamburger {
@@ -61,9 +56,3 @@
 }
 
 
-
-/*red: #ff4f32;
-  yellow: #ffc930;
-  blue:#61ccff
-  #231f20
- */

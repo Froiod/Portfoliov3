@@ -53,14 +53,14 @@ const Hero = () => {
               <motion.span
                 variants={child}
                 key={index}
-                className='hover:text-[#ff4f32] hover:translate-y-0.5 hover:transition-all cursor-pointer'
+                className='hover:text-indigo-600 hover:transition-all cursor-pointer'
               >
                 {letter}
               </motion.span>
             ))}
           </motion.div>
           
-          <p className="text-3xl md:text-5xl  xl:text-6xl text-blue-100 bg-[#ff4f32] inline-block px-4 md:px-6 pt-2 pb-4 font-bold">
+          <p className="text-3xl md:text-5xl  xl:text-6xl text-white bg-indigo-600 inline-block px-4 md:px-6 pt-2 pb-4 font-bold border-b-[12px] border-indigo-900">
             a<span className="font-600 italic font-bold"> Web Developer</span>
           </p>
           <p className="text-xl md:text-2xl text-gray-900 max-w-sm font-lato md:font-medium">
@@ -69,9 +69,9 @@ const Hero = () => {
         </div>          
       </div>
 
-      <div className='absolute top-0 right-12 flex items-center h-[100vh]'>
-        <div className='hidden md:right-12 md:flex  items-center justify-end'>
-          <img src={hero} alt="" className=''/>
+      <div className='absolute top-0 right-6 sm:right-12 flex items-center h-[100vh]'>
+        <div className='hidden md:flex items-center justify-end'>
+          <img src={hero} alt=""/>
         </div>
       </div>
       

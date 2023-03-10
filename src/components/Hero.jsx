@@ -1,6 +1,6 @@
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import hero from '../assets/hero.png'
-import Wave from '../assets/wave.png'
+import Wave from '../assets/hand.png'
 import {motion} from 'framer-motion'
 
 const Hero = () => {

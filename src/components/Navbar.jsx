@@ -100,7 +100,7 @@ function Navbar() {
           <ul className='hidden md:flex md:items-center md:w-auto space-x-8'>
               {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className=''>
-                <Link activeClass="active" smooth spy to={menu.item} className="block mt-2 md:mt-0 text-xl text-gray-400 font-semibold hover:text-gray-900 cursor-pointer">
+                <Link activeClass="active" smooth spy to={menu.item} className="block mt-2 md:mt-0 text-xl tracking-wider text-gray-400 font-semibold hover:text-gray-900 cursor-pointer">
                 {menu.item}
                 </Link>
               </li> 
@@ -118,7 +118,7 @@ function Navbar() {
       >
         <ul className="flex items-center justify-between w-full py-8 font-semibold  text-gray-400">
           {menuItems.map((menu) => (
-            <li key={`link-${menu.item}`} className='text-base sm:text-lg cursor-pointer hover:text-gray-800 hover:transition-all'>
+            <li key={`link-${menu.item}`} className='text-base sm:text-lg tracking-wider cursor-pointer hover:text-gray-800 hover:transition-all'>
               <Link activeClass="active" smooth spy to={menu.item} onClick={closeMenu} className='flex flex-col justify-center items-center gap-1'>
                 {menu.icon}
                 {menu.item}

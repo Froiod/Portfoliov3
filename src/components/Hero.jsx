@@ -63,7 +63,7 @@ const Hero = () => {
           <p className="text-3xl md:text-5xl  xl:text-6xl text-blue-100 bg-[#ff4f32] inline-block px-4 md:px-6 pt-2 pb-4 font-bold">
             a<span className="font-600 italic font-bold"> Web Developer</span>
           </p>
-          <p className="text-xl md:text-2xl text-gray-900 max-w-sm font-roboto md:font-medium">
+          <p className="text-xl md:text-2xl text-gray-900 max-w-sm font-lato md:font-medium">
             I am a self taught developer who <br/>loves learning new things.
           </p>
         </div>          

@@ -7,7 +7,7 @@ const About = () => {
     <section id='About' className='bg-gradient-to-br from-blue-200 to-blue-100 pb-16'>
       <div className="flex flex-col lg:h-[100vh] lg:flex-row px-6 sm:px-12 text-gray-900 py-12 mb-12">
 
-        <div className="flex justify-center relative lg:w-1/2 lg:items-center my-24 my-auto">
+        <div className="flex justify-center relative lg:w-1/2 lg:items-center my-24 md:my-auto">
           <div className='relative flex flex-col items-center justify-center mt-6'>
             <img src={frame} alt="" className='absolute' />
             <img src={profile} alt="" className='w-1/2 z-10 shadow-xl shadow-black'/>

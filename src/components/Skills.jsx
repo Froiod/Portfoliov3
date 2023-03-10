@@ -56,7 +56,7 @@ const Skills = () => {
         </h2>      
         <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>
           {languages.map((item) => (
-            <div className='flex flex-col justify-center items-center space-y-2'>
+            <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
               <img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'/>
               <h3 className='text-base text-center font-open-sans text-gray-600'>{item.name}</h3>
             </div>
@@ -70,7 +70,7 @@ const Skills = () => {
         </h2>      
         <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>
           {techs.map((item) => (
-            <div className='flex flex-col justify-center items-center space-y-2'>
+            <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
               <img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'/>
               <h3 className='text-base text-center font-open-sans text-gray-600'>{item.name}</h3>
             </div>

@@ -43,8 +43,10 @@ const Hero = () => {
 
   return (
     <section className="h-[100vh] flex items-center justify-between px-6 sm:px-12 font-montserrat" id='Home'>
+
       <div className='absolute top-0 flex items-center h-[100vh] z-10'>
         <div className="text-left space-y-6 ">
+
           <motion.div 
             className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-wider text-gray-900"
             variants={container} initial="hidden" animate="visible"
@@ -66,6 +68,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-gray-900 max-w-sm font-lato md:font-medium">
             I am a self taught developer who <br/>loves learning new things.
           </p>
+          
         </div>          
       </div>
 
@@ -75,7 +78,7 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className='absolute flex justify-end md:hidden top-4 right-12'>
+      <div className='absolute flex justify-end md:hidden top-8 right-12'>
         <img src={Wave} alt="" className='w-48'/>
       </div>
 

@@ -41,6 +41,21 @@ const Hero = () => {
     }
   }
 
+  const waveVariants = {
+    rotateLeft: { rotate: -15,  x: 10 },
+    rotateRight: { rotate: 10,  x: -10 },
+  }
+  const divVariants = {
+    rotateLeft: { x: -10, y: -5 },
+    rotateRight: { x: 10, y: 5 },
+  }
+  const divTransition = {
+    delay: 1.7,
+    duration: 1,
+    repeat: Infinity,
+    repeatType: "mirror",
+  }
+
   return (
     <section className="h-[100vh] flex items-center justify-between px-6 sm:px-12 font-montserrat" id='Home'>
 
@@ -62,31 +77,85 @@ const Hero = () => {
             ))}
           </motion.div>
           
-          <p className="text-3xl md:text-5xl  xl:text-6xl text-white bg-indigo-600 inline-block px-4 md:px-6 pt-2 pb-4 font-bold border-b-[12px] border-indigo-900">
+          <motion.p
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 1.7,
+                duration: 1,
+                ease: "easeInOut", 
+              },
+            }} 
+            className="text-3xl md:text-5xl  xl:text-6xl text-white bg-indigo-600 inline-block px-4 md:px-6 pt-2 pb-4 font-bold border-b-[12px] border-indigo-900 opacity-0"
+          >
             a<span className="font-600 italic font-bold"> Web Developer</span>
-          </p>
-          <p className="text-xl md:text-2xl text-gray-900 max-w-sm font-lato md:font-medium">
+          </motion.p>
+          <motion.p
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 1.7,
+                duration: 1,
+                ease: "easeInOut", 
+              },
+            }} 
+            className="text-xl md:text-2xl text-gray-900 max-w-sm font-lato md:font-medium opacity-0">
             I am a self taught developer who <br/>loves learning new things.
-          </p>
+          </motion.p>
           
         </div>          
       </div>
 
       <div className='absolute top-0 right-6 sm:right-12 flex items-center h-[100vh]'>
-        <div className='hidden md:flex items-center justify-end'>
-          <img src={hero} alt=""/>
-        </div>
+        <motion.div
+          variants={divVariants}
+          initial="rotateLeft"
+          animate="rotateRight"
+          transition={divTransition}
+          className='hidden md:flex items-center justify-end'
+        >
+          <motion.img src={hero} alt="" className='opacity-0'
+            animate={{
+              opacity: 1,
+              transition: {
+                delay: 1.7,
+                duration: 1,
+                ease: "easeInOut", 
+              },
+            }} 
+          />
+        </motion.div>
       </div>
       
-      <div className='absolute flex justify-end md:hidden top-8 right-12'>
+      <motion.div
+        variants={waveVariants}
+        initial="rotateLeft"
+        animate="rotateRight"
+        transition={{
+          duration: 0.6,
+          repeat: Infinity,
+          repeatType: "mirror",
+        }}  
+        className='absolute flex justify-end md:hidden top-8 right-12'>
         <img src={Wave} alt="" className='w-48'/>
-      </div>
+      </motion.div>
 
-      <div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl text-gray-900 z-10'>
+      <motion.div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl text-gray-900 z-10 opacity-0'
+        animate={{
+          opacity: 1,
+          transition: {
+            delay: 1.7,
+            duration: 2,
+            ease: "easeInOut", 
+          },
+        }}
+      >
         <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
         <a href="https://github.com/Froiod" target={'_blank'}><BsGithub/></a>
         <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>
-      </div>
+      </motion.div>
       
     </section>
   )

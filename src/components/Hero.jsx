@@ -79,7 +79,7 @@ const Hero = () => {
         <img src={Wave} alt="" className='w-48'/>
       </div>
 
-      <div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl text-indigo-900 z-10'>
+      <div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl text-gray-900 z-10'>
         <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
         <a href="https://github.com/Froiod" target={'_blank'}><BsGithub/></a>
         <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>

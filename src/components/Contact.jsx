@@ -68,7 +68,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className='flex space-x-6 text-2xl md:absolute left-12 bottom-12 text-indigo-900'>
+      <div className='flex space-x-6 text-2xl md:absolute left-12 bottom-12 text-gray-900'>
         <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
         <a href="https://github.com/Froiod" target={'_blank'}><BsGithub/></a>
         <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>

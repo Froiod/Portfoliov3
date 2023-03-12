@@ -12,11 +12,12 @@ const squareVariants = {
     rotate: 0, 
     opacity: 1, 
     transition: {
+      duration: 0.4,
       ease: "easeInOut",
     }, 
   },
   hidden: { 
-    y: 100,
+    y: 200,
     rotate: 30, 
     opacity: 0, 
   }

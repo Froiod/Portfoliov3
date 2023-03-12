@@ -4,12 +4,14 @@ import Contact from './components/Contact'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Works from './components/Works'
+// import Scroll from './components/Scroll'
 
 function App() {
 
   return (
     <div className="App bg-blue-100">
       <Navbar />
+      {/* <Scroll /> */}
       <Hero />
       <About />
       <Works />

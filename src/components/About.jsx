@@ -17,7 +17,7 @@ const squareVariants = {
   },
   hidden: { 
     y: 100,
-    rotate: -45, 
+    rotate: 30, 
     opacity: 0, 
   }
 };
@@ -61,14 +61,9 @@ const About = () => {
             className='relative flex flex-col items-center justify-center mt-6'>
             <img src={frame} alt="" className='absolute' />
             <img src={profile} alt="" className='w-1/2 scale-90 z-10 shadow-xl shadow-black'/>
-            <motion.h1 
-              ref={ref}
-              variants={fadeIn}
-              animate={controls}
-              initial="hidden"
-              className='text-white bg-gray-900 text-xl lg:text-2xl font-montserrat w-1/2 text-center py-1 z-10 shadow-lg shadow-black scale-90 '>
+            <h1 className='text-white bg-gray-900 text-xl lg:text-2xl font-montserrat w-1/2 text-center py-1 z-10 shadow-lg shadow-black        scale-90 '>
               About Me
-            </motion.h1>
+            </h1>
           </motion.div>
         </div>
 

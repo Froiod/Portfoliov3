@@ -10,7 +10,8 @@ const squareVariants = {
   visible: { 
     y: 0,
     rotate: 0, 
-    opacity: 1, 
+    scale: 1, 
+    opacity: 1,
     transition: {
       duration: 0.4,
       ease: "easeInOut",
@@ -18,7 +19,8 @@ const squareVariants = {
   },
   hidden: { 
     y: 200,
-    rotate: 30, 
+    rotate: 30,
+    scale: 0.7, 
     opacity: 0, 
   }
 };

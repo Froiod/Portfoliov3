@@ -42,8 +42,8 @@ const Hero = () => {
   }
 
   const waveVariants = {
-    rotateLeft: { rotate: -15,  x: 10 },
-    rotateRight: { rotate: 10,  x: -10 },
+    rotateLeft: { rotate: -15,  x: -10 },
+    rotateRight: { rotate: 10,  x: 10 },
   }
   const divVariants = {
     rotateLeft: { x: -10, y: -5 },

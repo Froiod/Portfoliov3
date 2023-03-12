@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-
+// for animation
 const squareVariants = {
   visible: { 
     y: 0,
@@ -35,7 +35,6 @@ const fadeIn = {
     opacity: 0
   }
 }
-
 
 
 const About = () => {

@@ -17,7 +17,7 @@ const squareVariants = {
   },
   hidden: { 
     y: 100,
-    rotate: -90, 
+    rotate: -45, 
     opacity: 0, 
   }
 };

@@ -7,18 +7,20 @@ const Hero = () => {
 
   //Animation 
   const intro = `Hello! I'm Paolo`
-  const introSplit = Array.from(intro)
+  const split = Array.from(intro)
 
   const container = {
     hidden: {opacity: 0},
     
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.08, delayChildren: 0.4 * i },
+      transition: { staggerChildren: 0.08, delayChildren: 0.3 * i },
     }),
   }
-
+  
   const child = {
+    // initial: {y: 0},
+    // hover: { y: -10 },
     visible: {
       opacity:1,
       x: 0,
@@ -31,14 +33,14 @@ const Hero = () => {
     },
     hidden: {
       opacity: 0,
-      x: 20,
-      y: 20,
+      x: -20,
+      y: -20,
       transition: {
         type: "spring",
         damping: 12,
         stiffness: 100,
       },
-    }
+    },
   }
 
   const waveVariants = {
@@ -66,13 +68,22 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-wider text-gray-900"
             variants={container} initial="hidden" animate="visible"
           >
-            {introSplit.map((letter, index) => (
+            {split.map((letter, index) => (
               <motion.span
+              key={index}
                 variants={child}
-                key={index}
-                className='hover:text-indigo-600 hover:transition-all cursor-pointer'
+                // whileHover="hover"
+                className='hover:text-indigo-600 cursor-pointer inline-block hover:rotate-4'
               >
-                {letter}
+                <motion.div
+                  variants={{
+                    initial: { y: 0 },
+                    hover: { y: -15 },
+                  }}
+                  whileHover="hover"
+                >
+                  {letter === " " ? "\u00A0" : letter}
+                </motion.div>
               </motion.span>
             ))}
           </motion.div>

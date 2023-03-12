@@ -1,4 +1,8 @@
 import React from 'react'
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
 import html from '../assets/html.svg'
 import css from '../assets/css.svg'
 import js from '../assets/js.svg'
@@ -45,8 +49,35 @@ const techs =  [
   },
 ]
 
+const fadeIn = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: 0.3,
+      duration: 0.6,
+      ease: "easeInOut",
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 50,
+    scale: 0
+  }
+}
 
 const Skills = () => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <div className='mx-6 sm:mx-12 pb-12 border-[6px] border-gray-800 font-montserrat'>
   
@@ -57,8 +88,25 @@ const Skills = () => {
         <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>
           {languages.map((item) => (
             <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
-              <img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'/>
-              <h3 className='text-base text-center font-open-sans text-gray-600'>{item.name}</h3>
+              <motion.img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'
+                ref={ref}
+                variants={fadeIn}
+                animate={controls}
+                initial="hidden"
+              />
+              <h3 className='text-base text-center font-open-sans text-gray-600'
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    delay: 0.8,
+                    duration: 1,
+                    ease: "easeInOut", 
+                  },
+                }} 
+              >
+                {item.name}
+              </h3>
             </div>
           ))}
         </div>
@@ -71,8 +119,25 @@ const Skills = () => {
         <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>
           {techs.map((item) => (
             <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
-              <img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'/>
-              <h3 className='text-base text-center font-open-sans text-gray-600'>{item.name}</h3>
+              <motion.img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'
+                ref={ref}
+                variants={fadeIn}
+                animate={controls}
+                initial="hidden"
+              />
+              <motion.h3 className='text-base text-center font-open-sans text-gray-600 opacity-0'
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    delay: 0.8,
+                    duration: 1,
+                    ease: "easeInOut", 
+                  },
+                }} 
+              >
+                {item.name}
+              </motion.h3>
             </div>
           ))}
         </div>

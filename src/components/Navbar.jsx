@@ -79,7 +79,7 @@ function Navbar() {
   return (
     <header
       className={`${
-        isSticky ? 'fixed top-0 w-full bg-white shadow-md z-50' : 'fixed top-0 w-full z-50'
+        isSticky ? 'fixed top-0 w-full bg-white shadow-md z-50 max-w-screen-xl' : 'fixed top-0 w-full z-50 max-w-screen-xl'
       }`}
     >
       <nav className="px-6 md:px-12 font-montserrat">

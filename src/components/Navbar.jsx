@@ -79,10 +79,10 @@ function Navbar() {
   return (
     <header
       className={`${
-        isSticky ? 'fixed top-0 w-full bg-white shadow-md z-50 max-w-screen-2xl' : 'fixed top-0 w-full z-50 max-w-screen-2xl'
+        isSticky ? 'fixed top-0 w-full bg-white shadow-md z-50' : 'fixed top-0 w-full z-50 '
       }`}
     >
-      <nav className="px-6 md:px-12 font-montserrat">
+      <nav className="px-6 md:px-12 font-montserrat max-w-screen-2xl mx-auto">
 
         <div className="flex w-full justify-between items-center py-4">
 

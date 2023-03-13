@@ -59,7 +59,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="h-[100vh] flex items-center justify-between px-6 sm:px-12 font-montserrat" id='Home'>
+    <section className="h-[100vh] relative flex items-center justify-between px-6 sm:px-12 font-montserrat max-w-screen-2xl mx-auto" id='Home'>
 
       <div className='absolute top-0 flex items-center h-[100vh] z-10'>
         <div className="text-left space-y-6 ">

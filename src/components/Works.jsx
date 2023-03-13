@@ -65,7 +65,7 @@ const Works = () => {
   }, [controls, inView]);
 
   return (
-    <section className='px-6 sm:px-12 py-16 text-center bg-gradient-to-br from-emerald-200 to-real-300 font-montserrat' id="Works">
+    <section className='px-6 sm:px-12 py-16 text-center bg-gradient-to-br from-emerald-200 to-real-300 font-montserrat max-w-screen-2xl mx-auto' id="Works">
       <div className="md:flex justify-between items-center mb-8 md:mb-12">
         <h2 className="text-xl md:text-2xl text-center font-black text-gray-900 md:text-left tracking-wider">MY PROJECTS</h2>
         <a href="https://github.com/Froiod" target={'_blank'}>

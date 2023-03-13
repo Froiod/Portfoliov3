@@ -69,7 +69,7 @@ const About = () => {
   
   
   return (
-    <section id='About' className='bg-gradient-to-br from-blue-200 to-blue-100 pb-16'>
+    <section id='About' className='bg-gradient-to-br from-blue-200 to-blue-100 pb-16 max-w-screen-2xl mx-auto'>
       <div className="flex flex-col md:h-[100vh] md:flex-row px-6 sm:px-12 text-gray-900 py-12 mb-12">
 
         <div className="flex justify-center relative md:w-1/2 md:items-center my-24 md:my-auto">

@@ -1,7 +1,26 @@
-import React, { useRef} from 'react';
+import React, { useRef, useEffect, useState} from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import emailjs from '@emailjs/browser';
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { GrMailOption } from 'react-icons/gr'
+
+const fadeIn = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut",
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 50,
+    scale: 0.8
+  }
+}
 
 const Contact = () => {
 
@@ -26,11 +45,32 @@ const Contact = () => {
       });
   };
 
+  const controls = useAnimation();
+  const [isMobile, setIsMobile] = useState(false)
+  const [ref, inView] = useInView({rootMargin: '300px 0px'}); 
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <section className='relative px-6 sm:px-12 py-16 md:py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12 font-open-sans' id='Contact'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8'>
         {/* leftside */}
-        <div className='p-6 bg-gray-100 dark:bg-gray-800 sm:rounded-lg'>
+        <motion.div className='p-6 bg-gray-100 dark:bg-gray-800 sm:rounded-lg'
+          ref={ref}
+          variants={fadeIn}
+          animate={controls}
+          initial="hidden"
+        >
           <h1 className="text-xl sm:text-2xl text-gray-800 dark:text-white font-bold font-montserrat tracking-wider">
             Get in touch
           </h1>
@@ -43,36 +83,62 @@ const Contact = () => {
               <h3>paologuray1@gmail.com</h3>
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* form */}
-        <form className="flex flex-col justify-center" ref={form} onSubmit={sendEmail}>
-          <div className="flex flex-col">
+        <motion.form className="flex flex-col justify-center" ref={form} onSubmit={sendEmail}>
+          <motion.div className="flex flex-col"
+            ref={ref}
+            variants={fadeIn}
+            animate={controls}
+            initial="hidden"
+          >
               <label htmlFor="name" className="hidden">Full Name</label>
               <input type="name" name="name" id="name" placeholder="Full Name" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 focus:border-indigo-500 focus:outline-none"/>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col mt-2">
+          <motion.div className="flex flex-col mt-2"
+            ref={ref}
+            variants={fadeIn}
+            animate={controls}
+            initial="hidden"
+          >
               <label htmlFor="email" className="hidden">Email</label>
               <input type="email" name="email" id="email" placeholder="Email" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 focus:border-indigo-500 focus:outline-none"/>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col mt-2">
+          <motion.div className="flex flex-col mt-2"
+            ref={ref}
+            variants={fadeIn}
+            animate={controls}
+            initial="hidden"
+          >
               <label htmlFor="message" className="hidden">Number</label>
               <textarea type="textbox" name="message" id="message" placeholder="Message" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 focus:border-indigo-500 focus:outline-none" required/>
-          </div>
-
-          <button type="submit" value="Send" className="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-montserrat font-semibold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-700 transition ease-in-out duration-300 tracking-wider">
+          </motion.div>
+          
+          <motion.button type="submit" value="Send" className="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-montserrat font-semibold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-700 transition ease-in-out duration-300 tracking-wider opacity-1"
+            ref={ref}
+            variants={fadeIn}
+            animate={controls}
+            initial="hidden"
+          >
               Submit
-          </button>
-        </form>
+          </motion.button>
+
+        </motion.form>
       </div>
 
-      <div className='flex space-x-6 text-2xl md:absolute left-12 bottom-12 text-gray-900'>
+      <motion.div className='flex space-x-6 text-2xl md:absolute left-12 bottom-12 text-gray-900'
+        ref={ref}
+        variants={fadeIn}
+        animate={controls}
+        initial="hidden"
+      >
         <a href="https://www.facebook.com/paolo.guray" target={'_blank'}><BsFacebook/></a>
         <a href="https://github.com/Froiod" target={'_blank'}><BsGithub/></a>
         <a href="https://www.linkedin.com/in/paolo-guray-a1aa91256/" target={'_blank'}><BsLinkedin/></a>
-      </div>
+      </motion.div>
 
     </section>
   )

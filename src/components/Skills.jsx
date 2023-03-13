@@ -55,7 +55,6 @@ const fadeIn = {
     y: 0,
     scale: 1,
     transition: {
-      delay: 0.3,
       duration: 0.6,
       ease: "easeInOut",
     },
@@ -70,7 +69,7 @@ const fadeIn = {
 const Skills = () => {
 
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({rootMargin: '200px 0px'});
 
   useEffect(() => {
     if (inView) {
@@ -85,7 +84,7 @@ const Skills = () => {
         <h2 className='text-lg md:text-xl text-white font-medium bg-gray-800 inline-block py-2 px-2 rounded-br-xl ml-0'>
           Languages:
         </h2>      
-        <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>
+        <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 gap-4 items-center py-4'>
           {languages.map((item) => (
             <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
               <motion.img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'
@@ -116,7 +115,7 @@ const Skills = () => {
         <h2 className='text-lg md:text-xl text-white font-medium bg-gray-800 inline-block py-2 px-2 rounded-br-xl ml-0'>
           Techs:
         </h2>      
-        <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 space-y-4 items-center py-4'>
+        <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 gap-4 items-center py-4'>
           {techs.map((item) => (
             <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
               <motion.img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'

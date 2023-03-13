@@ -3,7 +3,7 @@ import profile from '../assets/Profile.jpg'
 import Skills from './Skills'
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // for animation
 const squareVariants = {
@@ -24,25 +24,14 @@ const squareVariants = {
     opacity: 0, 
   }
 };
-const fadeIn = {
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.3,
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-  hidden: {
-    opacity: 0
-  }
-}
+
 
 
 const About = () => {
-
+  
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [isMobile, setIsMobile] = useState(false)
+  const [ref, inView] = useInView({rootMargin: `${ isMobile ? '100px 0px' : '0px 0px'}`}); 
 
   useEffect(() => {
     if (inView) {
@@ -50,6 +39,35 @@ const About = () => {
     }
   }, [controls, inView]);
 
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 769)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  },[])
+
+  const fadeIn = {
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: `${ isMobile ? 1 : 0.5}`,
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    hidden: {
+      opacity: 0
+    }
+  }
+  
+  
   return (
     <section id='About' className='bg-gradient-to-br from-blue-200 to-blue-100 pb-16'>
       <div className="flex flex-col md:h-[100vh] md:flex-row px-6 sm:px-12 text-gray-900 py-12 mb-12">

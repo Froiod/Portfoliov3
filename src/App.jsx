@@ -9,7 +9,7 @@ import Works from './components/Works'
 function App() {
 
   return (
-    <div className="App bg-blue-100">
+    <div className="App bg-blue-100 max-w-screen-2xl">
       <Navbar />
       {/* <Scroll /> */}
       <Hero />

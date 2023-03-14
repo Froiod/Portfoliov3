@@ -1,5 +1,6 @@
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
-import hero from '../assets/hero.png'
+import hero from '../assets/hero1.png'
+import oreti from '../assets/Oreti.png'
 import Wave from '../assets/hand.png'
 import {motion} from 'framer-motion'
 
@@ -59,13 +60,13 @@ const Hero = () => {
   }
 
   return (
-    <section className="h-[100vh] relative flex items-center justify-between px-6 sm:px-12 font-montserrat max-w-screen-2xl mx-auto bg-emerald-200" id='Home'>
+    <section className="h-[100vh] relative flex items-center justify-between px-6 sm:px-12 font-montserrat max-w-screen-2xl mx-auto bg-primary" id='Home'>
 
       <div className='absolute top-0 flex items-center h-[100vh] z-10'>
         <div className="text-left space-y-6 ">
 
           <motion.div 
-            className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-wider text-gray-900"
+            className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-wider text-secondary"
             variants={container} initial="hidden" animate="visible"
           >
             {split.map((letter, index) => (
@@ -73,7 +74,7 @@ const Hero = () => {
               key={index}
                 variants={child}
                 // whileHover="hover"
-                className='hover:text-indigo-600 cursor-pointer inline-block hover:rotate-4'
+                className='hover:text-accent cursor-pointer inline-block hover:rotate-4'
               >
                 <motion.div
                   variants={{
@@ -98,9 +99,9 @@ const Hero = () => {
                 ease: "easeInOut", 
               },
             }} 
-            className="text-3xl md:text-5xl  xl:text-6xl text-white bg-indigo-600 inline-block px-4 md:px-6 pt-2 pb-4 font-bold border-b-[12px] border-indigo-900 opacity-0"
+            className="text-3xl md:text-5xl  xl:text-6xl text-white bg-accent inline-block px-4 md:px-6 pt-2 pb-3 font-semibold border-b-[12px] border-[#b93b3b] opacity-0"
           >
-            a<span className="font-600 italic font-bold"> Web Developer</span>
+            a<span className="italic"> Web Developer</span>
           </motion.p>
           <motion.p
             animate={{
@@ -112,7 +113,7 @@ const Hero = () => {
                 ease: "easeInOut", 
               },
             }} 
-            className="text-xl md:text-2xl text-gray-900 max-w-sm font-lato md:font-medium opacity-0">
+            className="text-xl md:text-2xl text-secondary tracking-wide max-w-sm font-lato font-bold opacity-0">
             I am a self taught developer who <br/>loves learning new things.
           </motion.p>
           
@@ -153,7 +154,7 @@ const Hero = () => {
         <img src={Wave} alt="" className='w-48'/>
       </motion.div>
 
-      <motion.div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl text-gray-900 z-10 opacity-0'
+      <motion.div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl text-secondary z-10 opacity-0'
         animate={{
           opacity: 1,
           transition: {

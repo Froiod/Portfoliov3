@@ -46,7 +46,6 @@ const Contact = () => {
   };
 
   const controls = useAnimation();
-  const [isMobile, setIsMobile] = useState(false)
   const [ref, inView] = useInView({rootMargin: '300px 0px'}); 
 
   useEffect(() => {
@@ -62,7 +61,18 @@ const Contact = () => {
   }, [controls, inView]);
 
   return (
-    <section className='relative px-6 sm:px-12 py-16 md:py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12 font-open-sans max-w-screen-2xl mx-auto bg-blue-100' id='Contact'>
+    <section className='relative px-6 sm:px-12 py-16 md:py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12 font-open-sans max-w-screen-2xl mx-auto bg-primary' id='Contact'>
+
+      {/* section border */}
+      <div className='absolute top-0 w-full bg-gray-700'>
+        <div className=' relative w-full flex items-center justify-between space-x-1'>
+          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-12 z-10'>
+            Contact Me
+          </h1>
+          <div className='absolute h-[1px] w-full bg-white'></div>
+        </div>
+      </div>
+
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8'>
         {/* leftside */}
         <motion.div className='p-6 bg-gray-100 sm:rounded-lg'
@@ -117,7 +127,7 @@ const Contact = () => {
               <textarea type="textbox" name="message" id="message" placeholder="Message" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 focus:border-indigo-500 focus:outline-none" required/>
           </motion.div>
           
-          <motion.button type="submit" value="Send" className="md:w-32 bg-indigo-600  text-white font-montserrat font-semibold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-700 transition ease-in-out duration-300 tracking-wider opacity-1"
+          <motion.button type="submit" value="Send" className="md:w-32 bg-accent  text-white font-montserrat font-semibold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-700 transition ease-in-out duration-300 tracking-wider opacity-1"
             ref={ref}
             variants={fadeIn}
             animate={controls}
@@ -129,7 +139,7 @@ const Contact = () => {
         </motion.form>
       </div>
 
-      <motion.div className='flex space-x-6 text-2xl md:absolute left-12 bottom-12 text-gray-900'
+      <motion.div className='flex space-x-6 text-2xl md:absolute left-12 bottom-12 text-gray-800'
         ref={ref}
         variants={fadeIn}
         animate={controls}

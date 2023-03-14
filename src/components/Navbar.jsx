@@ -79,7 +79,7 @@ function Navbar() {
   return (
     <header
       className={`${
-        isSticky ? 'fixed top-0 w-full bg-white shadow-md z-50' : 'fixed top-0 w-full z-50 '
+        isSticky ? 'fixed top-0 w-full bg-white text-gray-400 shadow-md z-50' : 'fixed top-0 w-full z-50 text-gray-500'
       }`}
     >
       <nav className="px-6 md:px-12 font-montserrat max-w-screen-2xl mx-auto">
@@ -100,7 +100,7 @@ function Navbar() {
           <ul className='hidden md:flex md:items-center md:w-auto space-x-8'>
               {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className=''>
-                <Link activeClass="active" smooth spy to={menu.item} className="block mt-2 md:mt-0 text-lg tracking-wider text-gray-400 font-semibold hover:text-gray-900 cursor-pointer">
+                <Link activeClass="active" smooth spy to={menu.item} className="block mt-2 md:mt-0 text-lg tracking-wider font-bold hover:text-gray-900 cursor-pointer">
                 {menu.item}
                 </Link>
               </li> 

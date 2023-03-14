@@ -8,10 +8,18 @@ module.exports = {
     extend: {
       fontFamily: {
         'yeseva': ['Yeseva One', 'cursive'],
-        'montserrat': ['Montserrat', 'sansoserif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
         'lato': ['Lato', 'sans-serif'],
         'open-sans': ['Open Sans', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
+      },
+      colors: {
+        'primary': '#00ABE1',
+        'secondary': '#161F6D',
+        'accent': '#fc4445',
+        'accent-dark': '#61892F',
+        'light-blue': '#97caef',
+        'neutral-light': '#CAFAFE',
       }
     },
   },

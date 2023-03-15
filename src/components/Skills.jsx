@@ -78,7 +78,7 @@ const Skills = () => {
     <div className='mx-6 md:mx-12 font-montserrat bg-white mt-12 rounded-xl shadow-lg'>
   
       <div className=''>           
-        <div className='grid grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-4 items-center py-4'>
+        <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-4 items-center py-4'>
           {languages.map((item) => (
             <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
               <motion.img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'

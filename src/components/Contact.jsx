@@ -127,7 +127,7 @@ const Contact = () => {
               <textarea type="textbox" name="message" id="message" placeholder="Message" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 focus:border-indigo-500 focus:outline-none" required/>
           </motion.div>
           
-          <motion.button type="submit" value="Send" className="md:w-32 bg-accent  text-white font-montserrat font-semibold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-700 transition ease-in-out duration-300 tracking-wider opacity-1"
+          <motion.button type="submit" value="Send" className="md:w-32 bg-accent  text-white font-montserrat font-semibold py-3 px-6 rounded-lg mt-4 hover:bg-indigo-700 transition ease-in-out duration-300 tracking-wider opacity-1"
             ref={ref}
             variants={fadeIn}
             animate={controls}

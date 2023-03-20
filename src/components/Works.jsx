@@ -70,7 +70,7 @@ const Works = () => {
       {/* section border */}
       <div className='absolute top-0 w-full bg-gray-700'>
         <div className=' relative w-full flex items-center justify-between space-x-1'>
-          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-12 z-10'>
+          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12  z-10'>
             My Projects
           </h1>
           <a href="https://github.com/Froiod" target={'_blank'} className='z-10 hidden md:inline-block bg-gray-700 font-montserrat text-right py-1 px-12 text-white'>

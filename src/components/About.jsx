@@ -75,7 +75,7 @@ const About = () => {
       {/* section border */}
       <div className='absolute top-0 w-full bg-gray-700'>
         <div className=' relative w-full flex items-center justify-between space-x-1'>
-          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-12 z-10'>
+          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12 z-10'>
             About Me
           </h1>
           <div className='absolute h-[1px] w-full bg-white'></div>

@@ -65,7 +65,7 @@ const Works = () => {
   }, [controls, inView]);
 
   return (
-    <section className='relative max-w-screen-2xl mx-auto py-16 md:py-24 bg-primary' id="Works">
+    <section className='relative max-w-screen-2xl mx-auto py-16 md:py-24 bg-gradient-to-b from-primary to-white' id="Works">
 
       {/* section border */}
       <div className='absolute top-0 w-full bg-gray-700'>
@@ -90,7 +90,7 @@ const Works = () => {
           ))}
         </div>
         <a href="https://github.com/Froiod" target={"_blank"}>
-          <div className="md:hidden my-12 text-lg p-1 text-gray-900 font-semibold border-gray-900 border-2 hover:bg-indigo-600 hover:border-indigo-600 hover:text-white tracking-wider">
+          <div className="md:hidden my-12 text-lg p-1 text-gray-900 font-semibold border-gray-900 border-2 hover:bg-accent hover:border-accent hover:text-white tracking-wider">
             SEE ALL
           </div>
         </a>

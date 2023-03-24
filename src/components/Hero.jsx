@@ -77,7 +77,7 @@ const Hero = () => {
             Hello! I'm
           </motion.p>
           <motion.div 
-            className="text-6xl md:text-8xl font-semi-bold tracking-wider text-white"
+            className="text-5xl sm:text-6xl md:text-8xl font-semi-bold tracking-wider text-white"
             variants={container} initial="hidden" animate="visible"
           >
             {split.map((letter, index) => (

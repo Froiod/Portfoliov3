@@ -75,7 +75,7 @@ const Skills = () => {
   }, [controls, inView]);
 
   return (
-    <div className='mx-6 md:mx-12 font-montserrat bg-white mt-12 rounded-md shadow-lg '>
+    <div className='mx-6 md:mx-12 font-montserrat bg-gray-300 mt-12 rounded-md shadow-lg text-neutral2'>
   
       <div className=''>           
         <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-4 items-center py-4'>
@@ -87,7 +87,7 @@ const Skills = () => {
                 animate={controls}
                 initial="hidden"
               />
-              <h3 className='text-base text-center font-open-sans text-secondary font-semibold'
+              <h3 className='text-sm text-center font-open-sans'
                 animate={{
                   opacity: 1,
                   x: 0,

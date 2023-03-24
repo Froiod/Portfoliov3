@@ -79,7 +79,7 @@ function Navbar() {
   return (
     <header
       className={`${
-        isSticky ? 'fixed top-0 w-full bg-white text-gray-400 shadow-md z-50' : 'fixed top-0 w-full z-50 text-gray-500'
+        isSticky ? 'fixed top-0 w-full bg-white text-gray-400 shadow-md z-50' : 'fixed top-0 w-full z-50 text-gray-300'
       }`}
     >
       <nav className="px-6 md:px-12 font-montserrat max-w-screen-2xl mx-auto">
@@ -87,20 +87,20 @@ function Navbar() {
         <div className="flex w-full justify-between items-center py-4">
 
           <div className='-z-10'>
-            <img src={logo} alt="" className='w-24'/>
+            <img src='' alt="" className='w-24'/>
           </div>
           <div className="flex md:hidden">
             <button type="button" id="menu-btn" className={`${isOpen ? "open hamburger md:hidden focus:outline-none block" : "hamburger md:hidden focus:outline-none block"}`} onClick={openMenu}>
-              <span className="hamburger-top"></span>
-              <span className="hamburger-middle"></span>
-              <span className="hamburger-bottom"></span>
+              <span className={`${isOpen ? "hamburger-top bg-gray-900" : "hamburger-top bg-gray-200"}`}></span>
+              <span className={`${isOpen ? "hamburger-middle bg-gray-900" : "hamburger-middle bg-gray-200"}`}></span>
+              <span className={`${isOpen ? "hamburger-bottom bg-gray-900" : "hamburger-bottom bg-gray-200"}`}></span>
             </button>
           </div>
 
           <ul className='hidden md:flex md:items-center md:w-auto space-x-8'>
               {menuItems.map((menu) => (
               <li key={`link-${menu.item}`} className=''>
-                <Link activeClass="active" smooth spy to={menu.item} className="block mt-2 md:mt-0 text-lg tracking-wider font-bold hover:text-gray-900 cursor-pointer">
+                <Link activeClass="active" smooth spy to={menu.item} className="block mt-2 md:mt-0 text-md tracking-wider font-bold hover:text-red-400 cursor-pointer">
                 {menu.item}
                 </Link>
               </li> 
@@ -118,7 +118,7 @@ function Navbar() {
       >
         <ul className="flex items-center justify-between w-full py-8 font-semibold  text-gray-400">
           {menuItems.map((menu) => (
-            <li key={`link-${menu.item}`} className='text-base sm:text-md tracking-wider cursor-pointer hover:text-gray-800 hover:transition-all'>
+            <li key={`link-${menu.item}`} className='text-sm tracking-wider cursor-pointer hover:text-gray-800 hover:transition-all'>
               <Link activeClass="active" smooth spy to={menu.item} onClick={closeMenu} className='flex flex-col justify-center items-center gap-1'>
                 {menu.icon}
                 {menu.item}

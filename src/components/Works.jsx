@@ -65,7 +65,7 @@ const Works = () => {
   }, [controls, inView]);
 
   return (
-    <section className='relative max-w-screen-2xl mx-auto py-16 md:py-24 bg-gradient-to-b from-primary to-white' id="Works">
+    <section className='relative max-w-screen-2xl mx-auto py-16 md:py-24 bg-black' id="Works">
 
       {/* section border */}
       <div className='absolute top-0 w-full bg-gray-700'>
@@ -74,7 +74,7 @@ const Works = () => {
             My Projects
           </h1>
           <a href="https://github.com/Froiod" target={'_blank'} className='z-10 hidden md:inline-block bg-gray-700 font-montserrat text-right py-1 px-12 text-white'>
-            <div className="text-xl p-1 semibold bg-accent hover:bg-indigo-600 px-4 tracking-wider">
+            <div className="text-xl p-1 semibold bg-accent hover:bg-red-700 px-4 tracking-wider">
               SEE ALL
             </div>
           </a>
@@ -90,7 +90,7 @@ const Works = () => {
           ))}
         </div>
         <a href="https://github.com/Froiod" target={"_blank"}>
-          <div className="md:hidden my-12 text-lg p-1 text-gray-900 font-semibold border-gray-900 border-2 hover:bg-accent hover:border-accent hover:text-white tracking-wider">
+          <div className="md:hidden my-12 text-lg p-1 text-gray-300 font-semibold border-gray-300 border-2 hover:bg-accent hover:border-accent hover:text-white tracking-wider">
             SEE ALL
           </div>
         </a>
@@ -140,7 +140,7 @@ const ProjectDiv = ({ item }) => {
         <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-20">
         </div>
       </a>
-      <h5 className="absolute px-6 text-md md:text-lg tracking-wide font-medium text-blue-100 duration-300 bottom-0 md:px-10 group-hover:scale-110 group-hover:text-white bg-accent group-hover:bg-indigo-600 rounded-tr-xl">
+      <h5 className="absolute px-6 text-md md:text-lg tracking-wide font-medium text-blue-100 duration-300 bottom-0 md:px-10 group-hover:scale-110 group-hover:text-white bg-accent group-hover:bg-red-700 rounded-tr-xl">
         {item.title}
       </h5>
     </motion.div>

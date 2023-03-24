@@ -1,13 +1,13 @@
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import hero from '../assets/hero1.png'
-import oreti from '../assets/Oreti.png'
+import taieri from '../assets/Taieri.png'
 import Wave from '../assets/hand.png'
 import {motion} from 'framer-motion'
 
 const Hero = () => {
 
   //Animation 
-  const intro = `Hello! I'm Paolo`
+  const intro = `Paolo Guray`
   const split = Array.from(intro)
 
   const container = {
@@ -60,13 +60,13 @@ const Hero = () => {
   }
 
   return (
-    <section className="h-[100vh] relative flex items-center justify-between px-6 sm:px-12 font-montserrat max-w-screen-2xl mx-auto bg-gradient-to-br from-primary to-white" id='Home'>
+    <section className="h-[100vh] relative flex items-center justify-between px-6 sm:px-12 font-montserrat max-w-screen-2xl mx-auto bg-black" id='Home'>
 
       <div className='absolute top-0 flex items-center h-[100vh] z-10'>
-        <div className="text-left space-y-6 ">
-
+        <div className="text-left space-y-2 ">
+          <p className='text-xl tracking-wider text-gray-300'>Hello! I'm</p>
           <motion.div 
-            className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-wider text-secondary"
+            className="text-6xl md:text-8xl font-semi-bold tracking-wider text-white"
             variants={container} initial="hidden" animate="visible"
           >
             {split.map((letter, index) => (
@@ -99,9 +99,9 @@ const Hero = () => {
                 ease: "easeInOut", 
               },
             }} 
-            className="text-3xl md:text-5xl  xl:text-6xl text-white bg-accent inline-block px-4 md:px-6 pt-2 pb-3 font-semibold border-b-[12px] border-[#b93b3b] opacity-0"
+            className="text-lg bg-accent inline-block px-2 py-1 border-b-8 border-[#992828] opacity-0 text-gray-100"
           >
-            a<span className="italic"> Web Developer</span>
+            <span className="italic"> Web Developer</span>
           </motion.p>
           <motion.p
             animate={{
@@ -113,7 +113,7 @@ const Hero = () => {
                 ease: "easeInOut", 
               },
             }} 
-            className="text-xl md:text-2xl text-secondary tracking-wide max-w-sm font-lato font-bold opacity-0">
+            className=" text-gray-300 tracking-wider max-w-sm font-montserrat pt-6  opacity-0">
             I am a self taught developer who <br/>loves learning new things.
           </motion.p>
           
@@ -126,7 +126,7 @@ const Hero = () => {
           initial="rotateLeft"
           animate="rotateRight"
           transition={divTransition}
-          className='hidden md:flex items-center justify-end'
+          className='hidden xl:flex items-center justify-end'
         >
           <motion.img src={hero} alt="" className='opacity-0'
             animate={{
@@ -150,11 +150,11 @@ const Hero = () => {
           repeat: Infinity,
           repeatType: "mirror",
         }}  
-        className='absolute flex justify-end md:hidden top-8 right-12'>
+        className='absolute flex justify-end xl:hidden top-8 right-12'>
         <img src={Wave} alt="" className='w-48'/>
       </motion.div>
 
-      <motion.div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl text-secondary z-10 opacity-0'
+      <motion.div className='absolute left-6 sm:left-12 bottom-12 flex space-x-6 text-2xl z-10 opacity-0 text-gray-300'
         animate={{
           opacity: 1,
           transition: {

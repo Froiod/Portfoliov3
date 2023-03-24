@@ -64,7 +64,18 @@ const Hero = () => {
 
       <div className='absolute top-0 flex items-center h-[100vh] z-10'>
         <div className="text-left space-y-2 ">
-          <p className='text-xl tracking-wider text-gray-300'>Hello! I'm</p>
+          <motion.p className='text-xl tracking-wider text-gray-300'
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 1,
+                ease: "easeInOut", 
+              },
+            }}
+          >
+            Hello! I'm
+          </motion.p>
           <motion.div 
             className="text-6xl md:text-8xl font-semi-bold tracking-wider text-white"
             variants={container} initial="hidden" animate="visible"

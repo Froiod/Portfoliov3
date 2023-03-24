@@ -70,15 +70,15 @@ const About = () => {
   
   
   return (
-    <section id='About' className='relative bg-black max-w-screen-2xl mx-auto py-16 md:py-24'>
+    <section id='About' className='relative max-w-screen-2xl mx-auto py-16 md:py-24'>
 
       {/* section border */}
-      <div className='absolute top-0 w-full bg-gray-700'>
+      <div className='absolute top-0 w-full bg-black'>
         <div className=' relative w-full flex items-center justify-between space-x-1'>
-          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12 z-10'>
+          <h1 className='text-white text-xl bg-black lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12 z-10'>
             About Me
           </h1>
-          <div className='absolute h-[1px] w-full bg-white'></div>
+          <div className='absolute h-[1px] w-full bg-accent'></div>
         </div>
       </div>
       
@@ -102,7 +102,7 @@ const About = () => {
             variants={fadeIn}
             animate={controls}
             initial="hidden"
-            className='flex flex-col space-y-4 justify-center items-center text-base md:text-sm lg:text-base font-open-sans lg:items-center py-6 px-4 shadow-2xl rounded-lg  text-gray-300 font-base'>
+            className='flex flex-col space-y-4 justify-center items-center text-base md:text-sm lg:text-base font-open-sans lg:items-center py-6 px-4 rounded-lg  text-gray-300 font-base'>
             <p className='text-justify indent-4'>
               I started my journey as a mechanical engineering undergrad, but my passion for coding soon turned into a hobby that I fell in love with. The more I learned, the more I realized that this is what I want to do for a living. After much consideration, I've made the decision to switch careers and pursue web development full-time.
             </p>

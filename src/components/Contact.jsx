@@ -61,15 +61,15 @@ const Contact = () => {
   }, [controls, inView]);
 
   return (
-    <section className='relative px-6 sm:px-12 py-16 md:py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12 font-open-sans max-w-screen-2xl mx-auto bg-black' id='Contact'>
+    <section className='relative px-6 sm:px-12 py-16 md:py-24 md:h-[100vh] flex flex-col items-center justify-center space-y-12 font-open-sans max-w-screen-2xl mx-auto' id='Contact'>
 
       {/* section border */}
-      <div className='absolute top-0 w-full bg-gray-700'>
+      <div className='absolute top-0 w-full bg-black'>
         <div className=' relative w-full flex items-center justify-between space-x-1'>
-          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12  z-10'>
+          <h1 className='text-white text-xl bg-black lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12  z-10'>
             Contact Me
           </h1>
-          <div className='absolute h-[1px] w-full bg-white'></div>
+          <div className='absolute h-[1px] w-full bg-accent'></div>
         </div>
       </div>
 

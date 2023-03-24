@@ -65,20 +65,20 @@ const Works = () => {
   }, [controls, inView]);
 
   return (
-    <section className='relative max-w-screen-2xl mx-auto py-16 md:py-24 bg-black' id="Works">
+    <section className='relative max-w-screen-2xl mx-auto py-16 md:py-24' id="Works">
 
       {/* section border */}
-      <div className='absolute top-0 w-full bg-gray-700'>
+      <div className='absolute top-0 w-full bg-black'>
         <div className=' relative w-full flex items-center justify-between space-x-1'>
-          <h1 className='text-white text-xl bg-gray-700 lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12  z-10'>
+          <h1 className='text-white text-xl bg-black lg:text-2xl font-montserrat text-left py-1 px-6 md:px-12  z-10'>
             My Projects
           </h1>
-          <a href="https://github.com/Froiod" target={'_blank'} className='z-10 hidden md:inline-block bg-gray-700 font-montserrat text-right py-1 px-12 text-white'>
-            <div className="text-xl p-1 semibold bg-accent hover:bg-red-700 px-4 tracking-wider">
+          <a href="https://github.com/Froiod" target={'_blank'} className='z-10 hidden md:inline-block bg-black font-montserrat text-right py-1 px-12 text-gray-900'>
+            <div className="text-xl p-1 semibold bg-white hover:bg-red-700 px-4 tracking-wider">
               SEE ALL
             </div>
           </a>
-          <div className='absolute h-[1px] w-full bg-white'></div>
+          <div className='absolute h-[1px] w-full bg-accent'></div>
         </div>
       </div>
 

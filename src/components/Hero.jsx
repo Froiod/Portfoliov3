@@ -24,7 +24,7 @@ const Hero = () => {
     // hover: { y: -10 },
     visible: {
       opacity:1,
-      x: 0,
+      x: -5,
       y: 0,
       transition: {
         type: "spring",
@@ -60,7 +60,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="h-[100vh] relative flex items-center justify-between px-6 sm:px-12 font-montserrat max-w-screen-2xl mx-auto bg-black" id='Home'>
+    <section className="h-[100vh] relative flex items-center justify-between px-6 sm:px-12 font-montserrat max-w-screen-2xl mx-auto" id='Home'>
 
       <div className='absolute top-0 flex items-center h-[100vh] z-10'>
         <div className="text-left space-y-2 ">
@@ -69,7 +69,7 @@ const Hero = () => {
               opacity: 1,
               x: 0,
               transition: {
-                duration: 1,
+                duration: 3,
                 ease: "easeInOut", 
               },
             }}
@@ -90,7 +90,7 @@ const Hero = () => {
                 <motion.div
                   variants={{
                     initial: { y: 0 },
-                    hover: { y: -15 },
+                    hover: { y: -10 },
                   }}
                   whileHover="hover"
                 >

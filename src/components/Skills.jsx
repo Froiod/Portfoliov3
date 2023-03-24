@@ -75,7 +75,7 @@ const Skills = () => {
   }, [controls, inView]);
 
   return (
-    <div className='mx-6 md:mx-12 font-montserrat bg-gray-300 mt-12 rounded-md shadow-lg text-neutral2'>
+    <div className='mx-6 md:mx-12 font-montserrat bg-gray-700 mt-12 rounded-md shadow-lg text-white'>
   
       <div className=''>           
         <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-4 items-center py-4'>

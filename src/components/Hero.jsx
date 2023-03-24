@@ -64,7 +64,7 @@ const Hero = () => {
 
       <div className='absolute top-0 flex items-center h-[100vh] z-10'>
         <div className="text-left space-y-2 ">
-          <motion.p className='text-xl tracking-wider text-gray-300'
+          <motion.p className='text-xl tracking-wider text-gray-300 opacity-0'
             animate={{
               opacity: 1,
               x: 0,

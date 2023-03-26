@@ -87,13 +87,13 @@ function Navbar() {
         <div className="flex w-full justify-between items-center py-4">
 
           <div className='-z-10'>
-            <img src='' alt="" className='w-24'/>
+            <h1 className={`font-bold tracking-wider text-lg ${isSticky ? 'text-gray-900' : 'text-gray-100'}`}>PG</h1>
           </div>
           <div className="flex md:hidden">
             <button type="button" id="menu-btn" className={`${isOpen ? "open hamburger md:hidden focus:outline-none block" : "hamburger md:hidden focus:outline-none block"}`} onClick={openMenu}>
-              <span className={`${isOpen ? "hamburger-top bg-gray-900" : "hamburger-top bg-gray-200"}`}></span>
-              <span className={`${isOpen ? "hamburger-middle bg-gray-900" : "hamburger-middle bg-gray-200"}`}></span>
-              <span className={`${isOpen ? "hamburger-bottom bg-gray-900" : "hamburger-bottom bg-gray-200"}`}></span>
+              <span className={`${isSticky ? "hamburger-top bg-gray-800" : "hamburger-top bg-gray-200"} ${isOpen ? 'bg-gray-800' : ''}`}></span>
+              <span className={`${isSticky ? "hamburger-middle bg-gray-800" : "hamburger-middle bg-gray-200"}`}></span>
+              <span className={`${isSticky ? "hamburger-bottom bg-gray-800" : "hamburger-bottom bg-gray-200"} ${isOpen ? 'bg-gray-800' : ''}`}></span>
             </button>
           </div>
 

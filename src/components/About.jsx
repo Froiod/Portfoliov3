@@ -102,7 +102,7 @@ const About = () => {
             variants={fadeIn}
             animate={controls}
             initial="hidden"
-            className='flex flex-col space-y-4 justify-center items-center text-base md:text-sm lg:text-base font-open-sans lg:items-center py-6 px-4 rounded-lg  text-gray-300 font-base'>
+            className='flex flex-col space-y-4 justify-center items-center text-base md:text-sm lg:text-base font-open-sans lg:items-center py-6 rounded-lg  text-gray-300 font-base'>
             <p className='text-justify indent-4'>
               I started my journey as a mechanical engineering undergrad, but my passion for coding soon turned into a hobby that I fell in love with. The more I learned, the more I realized that this is what I want to do for a living. After much consideration, I've made the decision to switch careers and pursue web development full-time.
             </p>

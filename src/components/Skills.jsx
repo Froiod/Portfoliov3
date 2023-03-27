@@ -11,6 +11,9 @@ import bootstrap from '../assets/bootstrap.svg'
 import tailwind from '../assets/tailwindcss.svg'
 import postgress from '../assets/postgresql.svg'
 import sql from '../assets/sql.png'
+import firebase from '../assets/firebase.svg'
+import node from '../assets/nodejs.svg'
+import git from '../assets/git.svg'
 
 const languages =  [
   {
@@ -40,6 +43,18 @@ const languages =  [
   {
     imgUrl: react,
     name: 'React.js',
+  },
+  {
+    imgUrl: firebase,
+    name: 'Firebase',
+  },
+  {
+    imgUrl: node,
+    name: 'Node.js',
+  },
+  {
+    imgUrl: git,
+    name: 'GIT',
   },
   {
     imgUrl: postgress,

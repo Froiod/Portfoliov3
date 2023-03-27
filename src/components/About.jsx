@@ -1,4 +1,3 @@
-import frame from '../assets/frame.png'
 import profile from '../assets/Profile.jpg'
 import Skills from './Skills'
 import { motion, useAnimation } from "framer-motion";

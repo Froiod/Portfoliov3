@@ -1,6 +1,5 @@
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import hero from '../assets/hero1.png'
-import taieri from '../assets/Taieri.png'
 import Wave from '../assets/hand.png'
 import {motion} from 'framer-motion'
 

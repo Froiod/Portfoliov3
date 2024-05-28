@@ -14,8 +14,24 @@ import sql from '../assets/sql.png'
 import firebase from '../assets/firebase.svg'
 import node from '../assets/nodejs.svg'
 import git from '../assets/git.svg'
-
+import python from '../assets/python-original.svg'
+import pandas from '../assets/pandas-original.svg'
+import numpy from '../assets/numpy-original.svg'
+import linux from '../assets/linux-original.svg'
+import docker from '../assets/docker-plain.svg'
 const languages =  [
+  {
+    imgUrl: js,
+    name: 'JavaScript',
+  },
+  {
+    imgUrl: python,
+    name: 'Python',
+  },
+  {
+    imgUrl: sql,
+    name: 'SQL',
+  },
   {
     imgUrl: html,
     name: 'HTML',
@@ -25,12 +41,32 @@ const languages =  [
     name: 'CSS',
   },
   {
-    imgUrl: js,
-    name: 'JavaScript',
+    imgUrl: linux,
+    name: 'Linux',
   },
   {
-    imgUrl: sql,
-    name: 'SQL',
+    imgUrl: docker,
+    name: 'Docker',
+  },
+  {
+    imgUrl: react,
+    name: 'React.js',
+  },
+  {
+    imgUrl: node,
+    name: 'Node.js',
+  },
+  {
+    imgUrl: pandas,
+    name: 'Pandas',
+  },
+  {
+    imgUrl: numpy,
+    name: 'Numpy',
+  },
+  {
+    imgUrl: postgress,
+    name: 'PostgreSQL',
   },
   {
     imgUrl: bootstrap,
@@ -41,25 +77,13 @@ const languages =  [
     name: 'Tailwind',
   },
   {
-    imgUrl: react,
-    name: 'React.js',
-  },
-  {
     imgUrl: firebase,
     name: 'Firebase',
   },
   {
-    imgUrl: node,
-    name: 'Node.js',
-  },
-  {
     imgUrl: git,
     name: 'GIT',
-  },
-  {
-    imgUrl: postgress,
-    name: 'PostgreSQL',
-  },
+  }
 ]
 
 
@@ -96,7 +120,7 @@ const Skills = () => {
         <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-4 items-center py-4'>
           {languages.map((item) => (
             <div className='flex flex-col justify-center items-center space-y-2' key={item.name}>
-              <motion.img src={item.imgUrl} alt="" className='w-[27%] ld:w-[30%]'
+              <motion.img src={item.imgUrl} alt="" className='w-[50%] ld:w-[30%]'
                 ref={ref}
                 variants={fadeIn}
                 animate={controls}

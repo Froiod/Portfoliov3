@@ -111,7 +111,7 @@ const Hero = () => {
             }} 
             className="text-lg bg-accent inline-block px-2 py-1 border-b-8 border-[#992828] opacity-0 text-gray-100"
           >
-            <span className="italic"> Web Developer</span>
+            <span className="italic"> Software Developer</span>
           </motion.p>
           <motion.p
             animate={{
